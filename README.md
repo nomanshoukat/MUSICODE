@@ -2,7 +2,8 @@
 
 ## Description
 MUSICODE is an experimentally-validated multi-scale materials, process and device modeling & design platform enabling non-expert access to open innovation in the organic and large area electronics industry. It is a European collaborative research and innovation project led by a multi-disciplinary consortium coordinated by University Ioannina.
-To read more about the project, Please visit http://musicode.eu/
+Visit the following link to To learn more about the project
+http://musicode.eu/
 
 ## SRO - Simulation requirement ontology
 The ontology which showcases all the simulation activities in the MUSICODE platform is called simulation requirement ontology (SRO). 
