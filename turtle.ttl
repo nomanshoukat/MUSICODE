@@ -1,0 +1,1485 @@
+@prefix : <http://www.semanticweb.org/MUSICODE/SRO> .
+@prefix SRO: <http://www.semanticweb.org/MUSICODE/SRO#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix musicode: <http://www.semanticweb.org/hafiznoman/ontologies/2022/3/musicode#> .
+@base <http://www.semanticweb.org/MUSICODE/SRO> .
+
+<http://www.semanticweb.org/MUSICODE/SRO> rdf:type owl:Ontology ;
+                                           owl:versionIRI <http://www.semanticweb.org/MUSICODE/SRO/1.0.0> ;
+                                           rdfs:comment """The ontology showcases all simulation activities in the MUSICODE platform and called simulation requirement ontology (SRO). 
+MUSICODE is an experimentally-validated multi-scale materials, process and device modeling & design platform enabling non-expert access to open innovation in the organic and large area electronics industry. It is a European collaborative research and innovation project led by a multi-disciplinary consortium coordinated by University Ioannina.
+To read more about the project visit http://musicode.eu/
+The SRO represents the division of all simulation processes according to length scale and the responsible partner/ organization. It also shows the connection between the different partners and the importance of outputs of one simulation activity for another. The concepts, data items, naming conventions, and relations have been finalized after a rigorous discussion with partners. The partners who have been actively involved in the discussion were UOI, Tinnit, USUR, and KIT."""@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  https://www.w3.org/2007/rif#rif:lists
+<https://www.w3.org/2007/rif#rif:lists> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/MUSICODE/SRO#fundedBy
+SRO:fundedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain SRO:Project ;
+             rdfs:range SRO:EU ;
+             rdfs:comment "Project is funded by EU"@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasInput
+SRO:hasInput rdf:type owl:ObjectProperty ;
+             rdfs:domain SRO:MultiscaleModeling ;
+             rdfs:range SRO:Input .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasOutput
+SRO:hasOutput rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain SRO:MultiscaleModeling ;
+              rdfs:range SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasParticipant
+SRO:hasParticipant rdf:type owl:ObjectProperty ;
+                   owl:inverseOf SRO:participantOf .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#partOf
+SRO:partOf rdf:type owl:ObjectProperty ;
+           rdfs:domain SRO:MultiscaleModeling ;
+           rdfs:range SRO:MUSICODE .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#participantOf
+SRO:participantOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain SRO:KIT ;
+                  rdfs:range SRO:PhaseField .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#uses
+SRO:uses rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasConcentrationRange
+SRO:hasConcentrationRange rdf:type owl:DatatypeProperty ;
+                          rdfs:range [ rdf:type rdfs:Datatype ;
+                                       owl:onDatatype xsd:double ;
+                                       owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:double
+                                                              ]
+                                                              [ xsd:maxInclusive "1.0"^^xsd:double
+                                                              ]
+                                                            )
+                                     ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasFlowRateRange
+SRO:hasFlowRateRange rdf:type owl:DatatypeProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:onDatatype xsd:double ;
+                                  owl:withRestrictions ( [ xsd:minInclusive "0.01"^^xsd:double
+                                                         ]
+                                                         [ xsd:maxInclusive "30.0"^^xsd:double
+                                                         ]
+                                                       )
+                                ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasPressureRange
+SRO:hasPressureRange rdf:type owl:DatatypeProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:onDatatype xsd:double ;
+                                  owl:withRestrictions ( [ xsd:minInclusive "5.0"^^xsd:double
+                                                         ]
+                                                         [ xsd:maxInclusive "100.0"^^xsd:double
+                                                         ]
+                                                       )
+                                ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasTemperatureRange
+SRO:hasTemperatureRange rdf:type owl:DatatypeProperty ;
+                        rdfs:range [ rdf:type rdfs:Datatype ;
+                                     owl:onDatatype xsd:double ;
+                                     owl:withRestrictions ( [ xsd:minInclusive "-20.0"^^xsd:double
+                                                            ]
+                                                            [ xsd:maxInclusive "80.0"^^xsd:double
+                                                            ]
+                                                          )
+                                   ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasValue
+SRO:hasValue rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasVariableRate
+SRO:hasVariableRate rdf:type owl:DatatypeProperty ;
+                    rdfs:range [ rdf:type rdfs:Datatype ;
+                                 owl:onDatatype xsd:double ;
+                                 owl:withRestrictions ( [ xsd:minInclusive "0.1"^^xsd:double
+                                                        ]
+                                                        [ xsd:maxInclusive "10.0"^^xsd:double
+                                                        ]
+                                                      )
+                               ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasVelocityRange
+SRO:hasVelocityRange rdf:type owl:DatatypeProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:onDatatype xsd:double ;
+                                  owl:withRestrictions ( [ xsd:minInclusive "0.01"^^xsd:double
+                                                         ]
+                                                         [ xsd:maxInclusive "50.0"^^xsd:double
+                                                         ]
+                                                       )
+                                ] .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/MUSICODE/SRO#APEVA
+SRO:APEVA rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AUTH
+SRO:AUTH rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AtomisticScale
+SRO:AtomisticScale rdf:type owl:Class ;
+                   rdfs:subClassOf SRO:MultiscaleModeling .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#CTU
+SRO:CTU rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ContinuumScale
+SRO:ContinuumScale rdf:type owl:Class ;
+                   rdfs:subClassOf SRO:MultiscaleModeling .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForAtomicPolarizabilities-MEL
+SRO:DFTForAtomicPolarizabilities-MEL rdf:type owl:Class ;
+                                     rdfs:subClassOf SRO:AtomisticScale ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasParticipant ;
+                                                       owl:allValuesFrom SRO:UOI
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasInput ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass SRO:InputDFTForAtomicPolarizabilities-MEL
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasOutput ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass SRO:OutputDFTForAtomicPolarizabilities-MEL
+                                                     ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForChargeTransportParameters
+SRO:DFTForChargeTransportParameters rdf:type owl:Class ;
+                                    rdfs:subClassOf SRO:AtomisticScale ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty SRO:hasParticipant ;
+                                                      owl:allValuesFrom SRO:UOI
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty SRO:hasInput ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass SRO:InputDFTForChargeTransportParameters
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty SRO:hasOutput ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass SRO:OutputDFTForChargeTransportParameters
+                                                    ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForPartialCharges-RESP
+SRO:DFTForPartialCharges-RESP rdf:type owl:Class ;
+                              rdfs:subClassOf SRO:AtomisticScale ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty SRO:hasParticipant ;
+                                                owl:allValuesFrom SRO:UOI
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty SRO:hasInput ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass SRO:InputDFTForPartialCharges-RESP
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty SRO:hasOutput ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass SRO:OutputDFTForPartialCharges-RESP
+                                              ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForStructuralAndElectronicProperties
+SRO:DFTForStructuralAndElectronicProperties rdf:type owl:Class ;
+                                            rdfs:subClassOf SRO:AtomisticScale ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty SRO:hasParticipant ;
+                                                              owl:allValuesFrom SRO:USUR
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty SRO:hasInput ;
+                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass SRO:InputDFTForStructuralAndElectronicProperties
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty SRO:hasOutput ;
+                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass SRO:OutputDFTForStructuralAndElectronicProperties
+                                                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForTortionalProfiles
+SRO:DFTForTortionalProfiles rdf:type owl:Class ;
+                            rdfs:subClassOf SRO:AtomisticScale ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasParticipant ;
+                                              owl:allValuesFrom SRO:UOI
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasInput ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass SRO:InputDFTForTortionalProfiles
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasOutput ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass SRO:OutputDFTForTortionalProfiles
+                                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DriftDiffusionAndLightAbsorption
+SRO:DriftDiffusionAndLightAbsorption rdf:type owl:Class ;
+                                     rdfs:subClassOf SRO:ContinuumScale ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasParticipant ;
+                                                       owl:allValuesFrom SRO:Fluxim
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasInput ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass SRO:InputDriftDiffusionAndLightAbsorption
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasOutput ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass SRO:OutputDriftDiffusionAndLightAbsorption
+                                                     ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Dryer
+SRO:Dryer rdf:type owl:Class ;
+          rdfs:subClassOf SRO:ContinuumScale ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty SRO:hasParticipant ;
+                            owl:allValuesFrom SRO:Tinnit
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty SRO:hasInput ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass SRO:InputDryer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty SRO:hasOutput ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass SRO:OutputDryer
+                          ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ESTECO
+SRO:ESTECO rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#EU
+SRO:EU rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ElectrostaticsAndPolarization-MEL
+SRO:ElectrostaticsAndPolarization-MEL rdf:type owl:Class ;
+                                      rdfs:subClassOf SRO:AtomisticScale ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty SRO:hasParticipant ;
+                                                        owl:allValuesFrom SRO:UOI
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty SRO:hasInput ;
+                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onClass SRO:InputElectrostaticsAndPolarization-MEL
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty SRO:hasOutput ;
+                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onClass SRO:OutputElectrostaticsAndPolarization-MEL
+                                                      ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Experiment
+SRO:Experiment rdf:type owl:Class ;
+               rdfs:subClassOf SRO:Process .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Fluxim
+SRO:Fluxim rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#GRANTA
+SRO:GRANTA rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#GasProcessLine-CFD
+SRO:GasProcessLine-CFD rdf:type owl:Class ;
+                       rdfs:subClassOf SRO:ContinuumScale ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty SRO:hasParticipant ;
+                                         owl:allValuesFrom SRO:Tinnit
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty SRO:hasInput ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass SRO:InputGasProcess
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty SRO:hasOutput ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass SRO:OutputGasProcess
+                                       ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Input
+SRO:Input rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputDFTForAtomicPolarizabilities-MEL
+SRO:InputDFTForAtomicPolarizabilities-MEL rdf:type owl:Class ;
+                                          owl:equivalentClass SRO:InputDFTForTortionalProfiles ;
+                                          rdfs:subClassOf SRO:Input .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputDFTForChargeTransportParameters
+SRO:InputDFTForChargeTransportParameters rdf:type owl:Class ;
+                                         rdfs:subClassOf SRO:Input ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty SRO:uses ;
+                                                           owl:allValuesFrom SRO:OutputMDForRelaxingMolecularConfirmation
+                                                         ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputDFTForPartialCharges-RESP
+SRO:InputDFTForPartialCharges-RESP rdf:type owl:Class ;
+                                   owl:equivalentClass SRO:InputDFTForTortionalProfiles ;
+                                   rdfs:subClassOf SRO:Input .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputDFTForStructuralAndElectronicProperties
+SRO:InputDFTForStructuralAndElectronicProperties rdf:type owl:Class ;
+                                                 rdfs:subClassOf SRO:Input .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputDFTForTortionalProfiles
+SRO:InputDFTForTortionalProfiles rdf:type owl:Class ;
+                                 rdfs:subClassOf SRO:Input .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputDriftDiffusionAndLightAbsorption
+SRO:InputDriftDiffusionAndLightAbsorption rdf:type owl:Class ;
+                                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                owl:onProperty SRO:uses ;
+                                                                owl:allValuesFrom SRO:OutputKineticMonteCarlo
+                                                              ] ;
+                                          rdfs:subClassOf SRO:Input .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputDryer
+SRO:InputDryer rdf:type owl:Class ;
+               rdfs:subClassOf SRO:Input .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputElectrostaticsAndPolarization-MEL
+SRO:InputElectrostaticsAndPolarization-MEL rdf:type owl:Class ;
+                                           rdfs:subClassOf SRO:Input ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty SRO:uses ;
+                                                             owl:someValuesFrom SRO:OutputDFTForAtomicPolarizabilities-MEL
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty SRO:uses ;
+                                                             owl:someValuesFrom SRO:OutputDFTForPartialCharges-RESP
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty SRO:uses ;
+                                                             owl:someValuesFrom SRO:OutputMDForRelaxingMolecularConfirmation
+                                                           ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputGasProcess
+SRO:InputGasProcess rdf:type owl:Class ;
+                    rdfs:subClassOf SRO:Input ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty SRO:uses ;
+                                      owl:someValuesFrom SRO:OutputMDForDeposition
+                                    ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputKineticMonteCarlo
+SRO:InputKineticMonteCarlo rdf:type owl:Class ;
+                           rdfs:subClassOf SRO:Input ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty SRO:uses ;
+                                             owl:someValuesFrom SRO:OutputElectrostaticsAndPolarization-MEL
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty SRO:uses ;
+                                             owl:someValuesFrom SRO:OutputMDForDeposition
+                                           ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputMDForDeposition
+SRO:InputMDForDeposition rdf:type owl:Class ;
+                         rdfs:subClassOf SRO:Input ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty SRO:uses ;
+                                           owl:someValuesFrom SRO:OutputDFTForPartialCharges-RESP
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty SRO:uses ;
+                                           owl:someValuesFrom SRO:OutputMDForRelaxingMolecularConfirmation
+                                         ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputMDForRelaxingMolecularConfirmation
+SRO:InputMDForRelaxingMolecularConfirmation rdf:type owl:Class ;
+                                            rdfs:subClassOf SRO:Input ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty SRO:uses ;
+                                                              owl:someValuesFrom SRO:OutputDFTForPartialCharges-RESP
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty SRO:uses ;
+                                                              owl:someValuesFrom SRO:OutputDFTForTortionalProfiles
+                                                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputMontoCarloForMesoscopicMorphologies
+SRO:InputMontoCarloForMesoscopicMorphologies rdf:type owl:Class ;
+                                             rdfs:subClassOf SRO:Input ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty SRO:uses ;
+                                                               owl:someValuesFrom SRO:OutputGasProcess
+                                                             ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputPhaseField
+SRO:InputPhaseField rdf:type owl:Class ;
+                    rdfs:subClassOf SRO:Input ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty SRO:uses ;
+                                      owl:someValuesFrom SRO:OutputDryer
+                                    ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputSlotDie
+SRO:InputSlotDie rdf:type owl:Class ;
+                 rdfs:subClassOf SRO:Input .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#KIT
+SRO:KIT rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty SRO:participantOf ;
+                          owl:allValuesFrom SRO:PhaseField
+                        ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#KineticMonteCarlo
+SRO:KineticMonteCarlo rdf:type owl:Class ;
+                      rdfs:subClassOf SRO:MesoscopicScale ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty SRO:hasParticipant ;
+                                        owl:allValuesFrom SRO:UOI
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty SRO:hasInput ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass SRO:InputKineticMonteCarlo
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty SRO:hasOutput ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass SRO:OutputKineticMonteCarlo
+                                      ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MDForDeposition
+SRO:MDForDeposition rdf:type owl:Class ;
+                    rdfs:subClassOf SRO:AtomisticScale ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty SRO:hasParticipant ;
+                                      owl:allValuesFrom SRO:UOI
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty SRO:hasInput ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass SRO:InputMDForDeposition
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty SRO:hasOutput ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass SRO:OutputMDForDeposition
+                                    ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MDForRelaxingMolecularConfirmation
+SRO:MDForRelaxingMolecularConfirmation rdf:type owl:Class ;
+                                       rdfs:subClassOf SRO:AtomisticScale ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty SRO:hasParticipant ;
+                                                         owl:allValuesFrom SRO:UOI
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty SRO:hasInput ;
+                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                         owl:onClass SRO:InputMDForRelaxingMolecularConfirmation
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty SRO:hasOutput ;
+                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                         owl:onClass SRO:OutputMDForRelaxingMolecularConfirmation
+                                                       ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MUSICODE
+SRO:MUSICODE rdf:type owl:Class ;
+             rdfs:subClassOf SRO:Project .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MesoscopicScale
+SRO:MesoscopicScale rdf:type owl:Class ;
+                    rdfs:subClassOf SRO:MultiscaleModeling .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MontoCarloForMesoscopicMorphologies
+SRO:MontoCarloForMesoscopicMorphologies rdf:type owl:Class ;
+                                        rdfs:subClassOf SRO:MesoscopicScale ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasParticipant ;
+                                                          owl:allValuesFrom SRO:AUTH
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasInput ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass SRO:InputMontoCarloForMesoscopicMorphologies
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasOutput ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass SRO:OutputMontoCarloForMesoscopicMorphologies
+                                                        ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MultiscaleModeling
+SRO:MultiscaleModeling rdf:type owl:Class ;
+                       rdfs:subClassOf SRO:Process .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OET
+SRO:OET rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Output
+SRO:Output rdf:type owl:Class ;
+           rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputDFTForAtomicPolarizabilities-MEL
+SRO:OutputDFTForAtomicPolarizabilities-MEL rdf:type owl:Class ;
+                                           rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputDFTForChargeTransportParameters
+SRO:OutputDFTForChargeTransportParameters rdf:type owl:Class ;
+                                          rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputDFTForPartialCharges-RESP
+SRO:OutputDFTForPartialCharges-RESP rdf:type owl:Class ;
+                                    rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputDFTForStructuralAndElectronicProperties
+SRO:OutputDFTForStructuralAndElectronicProperties rdf:type owl:Class ;
+                                                  rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputDFTForTortionalProfiles
+SRO:OutputDFTForTortionalProfiles rdf:type owl:Class ;
+                                  rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputDriftDiffusionAndLightAbsorption
+SRO:OutputDriftDiffusionAndLightAbsorption rdf:type owl:Class ;
+                                           rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputDryer
+SRO:OutputDryer rdf:type owl:Class ;
+                rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputElectrostaticsAndPolarization-MEL
+SRO:OutputElectrostaticsAndPolarization-MEL rdf:type owl:Class ;
+                                            rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputGasProcess
+SRO:OutputGasProcess rdf:type owl:Class ;
+                     rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputKineticMonteCarlo
+SRO:OutputKineticMonteCarlo rdf:type owl:Class ;
+                            rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputMDForDeposition
+SRO:OutputMDForDeposition rdf:type owl:Class ;
+                          rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputMDForRelaxingMolecularConfirmation
+SRO:OutputMDForRelaxingMolecularConfirmation rdf:type owl:Class ;
+                                             rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputMontoCarloForMesoscopicMorphologies
+SRO:OutputMontoCarloForMesoscopicMorphologies rdf:type owl:Class ;
+                                              rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputPhaseField
+SRO:OutputPhaseField rdf:type owl:Class ;
+                     rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OutputSlotDie
+SRO:OutputSlotDie rdf:type owl:Class ;
+                  rdfs:subClassOf SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#PhaseField
+SRO:PhaseField rdf:type owl:Class ;
+               rdfs:subClassOf SRO:MesoscopicScale ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty SRO:hasParticipant ;
+                                 owl:allValuesFrom SRO:KIT
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty SRO:hasInput ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass SRO:InputPhaseField
+                               ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Process
+SRO:Process rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Project
+SRO:Project rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#SlotDie
+SRO:SlotDie rdf:type owl:Class ;
+            rdfs:subClassOf SRO:ContinuumScale ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty SRO:hasParticipant ;
+                              owl:allValuesFrom SRO:Tinnit
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty SRO:hasInput ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass SRO:InputSlotDie
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty SRO:hasOutput ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass SRO:OutputSlotDie
+                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Tinnit
+SRO:Tinnit rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#UOI
+SRO:UOI rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#USUR
+SRO:USUR rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO/Equipment
+<http://www.semanticweb.org/MUSICODE/SRO/Equipment> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                                    skos:definition "Any kind of tool or device used during the course of an Experiment"@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO/ResearchUser
+<http://www.semanticweb.org/MUSICODE/SRO/ResearchUser> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                                       skos:definition "A person, a group of them, or an Institution (organization) who, within a Project, conducts Experiment on one or more Laboratories using one or more Instruments in order to collect and analyze Research Data, or is interested in data collected or analyzed by other Research Users on the same or other Facilities. Research User may be assigned with a role, e.g. to designate the user as a Principal Investigator."@en .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+<http://www.w3.org/ns/prov#SoftwareAgent> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AtomicPolarizabilities
+SRO:AtomicPolarizabilities rdf:type owl:NamedIndividual ;
+                           SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#COMCoordinates
+SRO:COMCoordinates rdf:type owl:NamedIndividual ,
+                            SRO:OutputMDForRelaxingMolecularConfirmation ;
+                   SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#CisDistortedMinimum
+SRO:CisDistortedMinimum rdf:type owl:NamedIndividual ,
+                                 SRO:OutputDFTForTortionalProfiles ;
+                        SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#TransDistortedMinimum
+SRO:TransDistortedMinimum rdf:type owl:NamedIndividual ,
+                                   SRO:OutputDFTForTortionalProfiles ;
+                          SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#absorptionProfiles
+SRO:absorptionProfiles rdf:type owl:NamedIndividual ,
+                                SRO:OutputDriftDiffusionAndLightAbsorption ;
+                       SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomList
+SRO:atomList rdf:type owl:NamedIndividual ,
+                      SRO:InputDFTForStructuralAndElectronicProperties ;
+             SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomName
+SRO:atomName rdf:type owl:NamedIndividual ,
+                      SRO:OutputMDForRelaxingMolecularConfirmation ;
+             SRO:hasValue "" .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomType
+SRO:atomType rdf:type owl:NamedIndividual ,
+                      SRO:OutputMDForRelaxingMolecularConfirmation ;
+             SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomicCoordinates
+SRO:atomicCoordinates rdf:type owl:NamedIndividual ,
+                               SRO:OutputDFTForAtomicPolarizabilities-MEL ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomicPositions
+SRO:atomicPositions rdf:type owl:NamedIndividual ,
+                             SRO:OutputDFTForStructuralAndElectronicProperties ;
+                    SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#averageIsotropicMobility
+SRO:averageIsotropicMobility rdf:type owl:NamedIndividual ,
+                                      SRO:OutputKineticMonteCarlo ;
+                             SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#averageMobilityEigenvalues
+SRO:averageMobilityEigenvalues rdf:type owl:NamedIndividual ,
+                                        SRO:OutputKineticMonteCarlo ;
+                               SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#averageMobilityTensor
+SRO:averageMobilityTensor rdf:type owl:NamedIndividual ,
+                                   SRO:OutputKineticMonteCarlo ;
+                          SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#bandGap
+SRO:bandGap rdf:type owl:NamedIndividual ,
+                     SRO:OutputDFTForStructuralAndElectronicProperties ;
+            SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#bandStructure
+SRO:bandStructure rdf:type owl:NamedIndividual ,
+                           SRO:OutputDFTForStructuralAndElectronicProperties .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#beltEndFilmThickness
+SRO:beltEndFilmThickness rdf:type owl:NamedIndividual ,
+                                  SRO:OutputSlotDie ;
+                         SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#beltTemperature
+SRO:beltTemperature rdf:type owl:NamedIndividual ,
+                             SRO:InputSlotDie ;
+                    SRO:hasTemperatureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#beltVelocity
+SRO:beltVelocity rdf:type owl:NamedIndividual ,
+                          SRO:InputSlotDie ;
+                 SRO:hasVelocityRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#chargeDensity
+SRO:chargeDensity rdf:type owl:NamedIndividual ,
+                           SRO:InputPhaseField ;
+                  SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#chemicalStructure
+SRO:chemicalStructure rdf:type owl:NamedIndividual ,
+                               SRO:InputDFTForTortionalProfiles ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#componentChemicalPotential
+SRO:componentChemicalPotential rdf:type owl:NamedIndividual ,
+                                        SRO:OutputPhaseField ;
+                               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#concentrationDistribution
+SRO:concentrationDistribution rdf:type owl:NamedIndividual ,
+                                       SRO:OutputGasProcess ;
+                              SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#concentrationOfPolymer
+SRO:concentrationOfPolymer rdf:type owl:NamedIndividual ,
+                                    SRO:InputGasProcess ;
+                           SRO:hasConcentrationRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#coordinates
+SRO:coordinates rdf:type owl:NamedIndividual ,
+                         SRO:OutputMDForDeposition ;
+                SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#coordinatesOfChargedConfiguration
+SRO:coordinatesOfChargedConfiguration rdf:type owl:NamedIndividual ,
+                                               SRO:OutputDFTForChargeTransportParameters ;
+                                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#coordinatesOfNeutralConfiguration
+SRO:coordinatesOfNeutralConfiguration rdf:type owl:NamedIndividual ,
+                                               SRO:OutputDFTForChargeTransportParameters ;
+                                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#degreeOfPolymerization
+SRO:degreeOfPolymerization rdf:type owl:NamedIndividual ,
+                                    SRO:InputPhaseField ;
+                           SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#densityOfStates
+SRO:densityOfStates rdf:type owl:NamedIndividual ,
+                             SRO:OutputDFTForStructuralAndElectronicProperties .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#depositionRate
+SRO:depositionRate rdf:type owl:NamedIndividual ,
+                            SRO:InputGasProcess ;
+                   SRO:hasVariableRate ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#deviceCurrent
+SRO:deviceCurrent rdf:type owl:NamedIndividual ,
+                           SRO:OutputDriftDiffusionAndLightAbsorption ;
+                  SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#deviceMerit
+SRO:deviceMerit rdf:type owl:NamedIndividual ,
+                         SRO:OutputDriftDiffusionAndLightAbsorption .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#effectiveElectronMass
+SRO:effectiveElectronMass rdf:type owl:NamedIndividual ,
+                                   SRO:OutputDFTForStructuralAndElectronicProperties ;
+                          SRO:hasTemperatureRange ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#effectiveHoleMass
+SRO:effectiveHoleMass rdf:type owl:NamedIndividual ,
+                               SRO:OutputDFTForStructuralAndElectronicProperties ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#effectivePermeability
+SRO:effectivePermeability rdf:type owl:NamedIndividual ,
+                                   SRO:OutputPhaseField ;
+                          SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#effectiveViscosity
+SRO:effectiveViscosity rdf:type owl:NamedIndividual ,
+                                SRO:OutputPhaseField ;
+                       SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#electricalProfiles
+SRO:electricalProfiles rdf:type owl:NamedIndividual ,
+                                SRO:OutputDriftDiffusionAndLightAbsorption ;
+                       SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#electrostaticEnergies
+SRO:electrostaticEnergies rdf:type owl:NamedIndividual ,
+                                   SRO:OutputElectrostaticsAndPolarization-MEL ;
+                          SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#electrostaticPotential
+SRO:electrostaticPotential rdf:type owl:NamedIndividual ,
+                                    SRO:OutputDFTForPartialCharges-RESP ;
+                           SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyBarriers
+SRO:energyBarriers rdf:type owl:NamedIndividual ,
+                            SRO:OutputDFTForTortionalProfiles ;
+                   SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyConvergenceCriterion
+SRO:energyConvergenceCriterion rdf:type owl:NamedIndividual ,
+                                        SRO:InputDFTForStructuralAndElectronicProperties ;
+                               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyEigenvaluesOfHOMO
+SRO:energyEigenvaluesOfHOMO rdf:type owl:NamedIndividual ,
+                                     SRO:OutputDFTForChargeTransportParameters ;
+                            SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyEigenvaluesOfLUMO
+SRO:energyEigenvaluesOfLUMO rdf:type owl:NamedIndividual ,
+                                     SRO:OutputDFTForChargeTransportParameters ;
+                            SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyPreferableAtomicCoordinates
+SRO:energyPreferableAtomicCoordinates rdf:type owl:NamedIndividual ,
+                                               SRO:OutputDFTForTortionalProfiles ;
+                                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energySpatialCorrelations
+SRO:energySpatialCorrelations rdf:type owl:NamedIndividual ,
+                                       SRO:OutputKineticMonteCarlo ;
+                              SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#environmentTemperature
+SRO:environmentTemperature rdf:type owl:NamedIndividual ,
+                                    SRO:InputSlotDie ;
+                           SRO:hasTemperatureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#exchangeCorrelationFunctional
+SRO:exchangeCorrelationFunctional rdf:type owl:NamedIndividual ,
+                                           SRO:InputDFTForStructuralAndElectronicProperties ;
+                                  SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#filmConcentration
+SRO:filmConcentration rdf:type owl:NamedIndividual ,
+                               SRO:OutputDryer ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#filmEvaporationRate
+SRO:filmEvaporationRate rdf:type owl:NamedIndividual ,
+                                 SRO:OutputDryer ;
+                        SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#filmTemperature
+SRO:filmTemperature rdf:type owl:NamedIndividual ,
+                             SRO:OutputDryer ;
+                    SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#finalAtomicPolarizabilities
+SRO:finalAtomicPolarizabilities rdf:type owl:NamedIndividual ,
+                                         SRO:OutputDFTForAtomicPolarizabilities-MEL ;
+                                SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#forceConvergenceCriterion
+SRO:forceConvergenceCriterion rdf:type owl:NamedIndividual ,
+                                       SRO:InputDFTForStructuralAndElectronicProperties ;
+                              SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gasProcessBackground
+SRO:gasProcessBackground rdf:type owl:NamedIndividual ,
+                                  SRO:InputGasProcess ;
+                         SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gasProcessModel
+SRO:gasProcessModel rdf:type owl:NamedIndividual ,
+                             SRO:InputGasProcess ;
+                    SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gasProcessSolvent
+SRO:gasProcessSolvent rdf:type owl:NamedIndividual ,
+                               SRO:InputGasProcess ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gassProcessInletFlowRate
+SRO:gassProcessInletFlowRate rdf:type owl:NamedIndividual ,
+                                      SRO:InputGasProcess ;
+                             SRO:hasFlowRateRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gassProcessInletPressure
+SRO:gassProcessInletPressure rdf:type owl:NamedIndividual ,
+                                      SRO:InputGasProcess ;
+                             SRO:hasPressureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gassProcessInletTemperature
+SRO:gassProcessInletTemperature rdf:type owl:NamedIndividual ,
+                                         SRO:InputGasProcess ;
+                                SRO:hasTemperatureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainAtomicCoordinates
+SRO:grainAtomicCoordinates rdf:type owl:NamedIndividual ,
+                                    SRO:OutputMDForRelaxingMolecularConfirmation ;
+                           SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainAtomicVelocities
+SRO:grainAtomicVelocities rdf:type owl:NamedIndividual ,
+                                   SRO:OutputMDForRelaxingMolecularConfirmation ;
+                          SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainCOMCoordinates
+SRO:grainCOMCoordinates rdf:type owl:NamedIndividual ,
+                                 SRO:OutputMDForRelaxingMolecularConfirmation ;
+                        SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainCellVectors
+SRO:grainCellVectors rdf:type owl:NamedIndividual ,
+                              SRO:OutputMDForRelaxingMolecularConfirmation ;
+                     SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainNearestNeighbors
+SRO:grainNearestNeighbors rdf:type owl:NamedIndividual ,
+                                   SRO:OutputMDForRelaxingMolecularConfirmation ;
+                          SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hydrostaticPressure
+SRO:hydrostaticPressure rdf:type owl:NamedIndividual ,
+                                 SRO:OutputPhaseField ;
+                        SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#initialCompositionSolution
+SRO:initialCompositionSolution rdf:type owl:NamedIndividual ,
+                                        SRO:InputPhaseField ;
+                               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#inletPressure
+SRO:inletPressure rdf:type owl:NamedIndividual ;
+                  SRO:hasPressureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#interactionParameter
+SRO:interactionParameter rdf:type owl:NamedIndividual ,
+                                  SRO:InputPhaseField ;
+                         SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#interfaceWidth
+SRO:interfaceWidth rdf:type owl:NamedIndividual ,
+                            SRO:InputPhaseField ;
+                   SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#interfacialTension
+SRO:interfacialTension rdf:type owl:NamedIndividual ,
+                                SRO:InputPhaseField ;
+                       SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#internalReorganizationEnergy
+SRO:internalReorganizationEnergy rdf:type owl:NamedIndividual ,
+                                          SRO:OutputDFTForChargeTransportParameters ;
+                                 SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#latticeVectors
+SRO:latticeVectors rdf:type owl:NamedIndividual ,
+                            SRO:OutputDFTForStructuralAndElectronicProperties ;
+                   SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#massDensity
+SRO:massDensity rdf:type owl:NamedIndividual ,
+                         SRO:InputPhaseField ;
+                SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#maximumPhotocurrent
+SRO:maximumPhotocurrent rdf:type owl:NamedIndividual ,
+                                 SRO:OutputDriftDiffusionAndLightAbsorption ;
+                        SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#microstructureEvolution
+SRO:microstructureEvolution rdf:type owl:NamedIndividual ,
+                                     SRO:OutputPhaseField ;
+                            SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#mobilityFieldDependence
+SRO:mobilityFieldDependence rdf:type owl:NamedIndividual ,
+                                     SRO:OutputKineticMonteCarlo ;
+                            SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#mobilityParameterizationSet
+SRO:mobilityParameterizationSet rdf:type owl:NamedIndividual ,
+                                         SRO:OutputKineticMonteCarlo ;
+                                SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#mobilityTemperatureDependence
+SRO:mobilityTemperatureDependence rdf:type owl:NamedIndividual ,
+                                           SRO:OutputKineticMonteCarlo ;
+                                  SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#modelSource
+SRO:modelSource rdf:type owl:NamedIndividual ,
+                         SRO:InputSlotDie ;
+                SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#modelType
+SRO:modelType rdf:type owl:NamedIndividual ,
+                       SRO:InputSlotDie ;
+              SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#molarvolume
+SRO:molarvolume rdf:type owl:NamedIndividual ,
+                         SRO:InputPhaseField ;
+                SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#molecularPolarizabilityTensor
+SRO:molecularPolarizabilityTensor rdf:type owl:NamedIndividual ,
+                                           SRO:OutputDFTForAtomicPolarizabilities-MEL ;
+                                  SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#nitrogenFlowRate
+SRO:nitrogenFlowRate rdf:type owl:NamedIndividual ;
+                     SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#numberOfAtoms
+SRO:numberOfAtoms rdf:type owl:NamedIndividual ,
+                           SRO:OutputMDForRelaxingMolecularConfirmation ;
+                  SRO:hasValue ""^^xsd:int .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#numberOfBouncedMolecules
+SRO:numberOfBouncedMolecules rdf:type owl:NamedIndividual ,
+                                      SRO:OutputMDForDeposition ;
+                             SRO:hasValue ""^^xsd:int .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#numberOfCompositions
+SRO:numberOfCompositions rdf:type owl:NamedIndividual ,
+                                  SRO:InputPhaseField ;
+                         SRO:hasValue ""^^xsd:int .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#numberOfResidues
+SRO:numberOfResidues rdf:type owl:NamedIndividual ,
+                              SRO:OutputMDForRelaxingMolecularConfirmation ;
+                     SRO:hasValue ""^^xsd:int .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#orbitalEnergies
+SRO:orbitalEnergies rdf:type owl:NamedIndividual ,
+                             SRO:OutputDFTForChargeTransportParameters ;
+                    SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#partialCharges
+SRO:partialCharges rdf:type owl:NamedIndividual ,
+                            SRO:OutputDFTForPartialCharges-RESP ;
+                   SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#phaseComposition
+SRO:phaseComposition rdf:type owl:NamedIndividual ,
+                              SRO:OutputPhaseField ;
+                     SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#phaseTemperature
+SRO:phaseTemperature rdf:type owl:NamedIndividual ;
+                     SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#phaseTransition
+SRO:phaseTransition rdf:type owl:NamedIndividual ,
+                             SRO:OutputPhaseField ;
+                    SRO:hasValue "" .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#polarizationEnergies
+SRO:polarizationEnergies rdf:type owl:NamedIndividual ,
+                                  SRO:OutputElectrostaticsAndPolarization-MEL ;
+                         SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#pressureDistribution
+SRO:pressureDistribution rdf:type owl:NamedIndividual ,
+                                  SRO:OutputGasProcess ;
+                         SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#propertyDistribution
+SRO:propertyDistribution rdf:type owl:NamedIndividual ,
+                                  SRO:OutputGasProcess ;
+                         SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#radialDistributionFunction
+SRO:radialDistributionFunction rdf:type owl:NamedIndividual ,
+                                        SRO:OutputMDForRelaxingMolecularConfirmation ;
+                               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#recombinitionProbabilities
+SRO:recombinitionProbabilities rdf:type owl:NamedIndividual ,
+                                        SRO:InputMontoCarloForMesoscopicMorphologies ;
+                               SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#residueName
+SRO:residueName rdf:type owl:NamedIndividual ,
+                         SRO:OutputMDForRelaxingMolecularConfirmation ;
+                SRO:hasValue "" .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#selfDiffusivity
+SRO:selfDiffusivity rdf:type owl:NamedIndividual ,
+                             SRO:InputPhaseField ;
+                    SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#slotDieInletVelocity
+SRO:slotDieInletVelocity rdf:type owl:NamedIndividual ,
+                                  SRO:InputSlotDie ;
+                         SRO:hasVelocityRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#solubility
+SRO:solubility rdf:type owl:NamedIndividual ,
+                        SRO:InputPhaseField ;
+               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#solventName
+SRO:solventName rdf:type owl:NamedIndividual ,
+                         SRO:InputSlotDie ;
+                SRO:hasValue "" .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#spinOrbitCoupling
+SRO:spinOrbitCoupling rdf:type owl:NamedIndividual ,
+                               SRO:InputDFTForStructuralAndElectronicProperties ;
+                      SRO:hasValue "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#surfaceComposition
+SRO:surfaceComposition rdf:type owl:NamedIndividual ,
+                                SRO:InputPhaseField ;
+                       SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#surfaceTension
+SRO:surfaceTension rdf:type owl:NamedIndividual ,
+                            SRO:InputPhaseField ;
+                   SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#temperatureDistribution
+SRO:temperatureDistribution rdf:type owl:NamedIndividual ,
+                                     SRO:OutputGasProcess ;
+                            SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#temperatureGradient
+SRO:temperatureGradient rdf:type owl:NamedIndividual ,
+                                 SRO:OutputPhaseField ;
+                        SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#torsionalProfiles
+SRO:torsionalProfiles rdf:type owl:NamedIndividual ,
+                               SRO:OutputDFTForTortionalProfiles ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#tortionalEnergyProfiles
+SRO:tortionalEnergyProfiles rdf:type owl:NamedIndividual ,
+                                     SRO:OutputMDForRelaxingMolecularConfirmation ;
+                            SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#totalEnergy
+SRO:totalEnergy rdf:type owl:NamedIndividual ,
+                         SRO:OutputDFTForStructuralAndElectronicProperties ;
+                SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#transferIntegral
+SRO:transferIntegral rdf:type owl:NamedIndividual ,
+                              SRO:OutputDFTForChargeTransportParameters ;
+                     SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#vanderWaals
+SRO:vanderWaals rdf:type owl:NamedIndividual ,
+                         SRO:InputDFTForStructuralAndElectronicProperties ;
+                SRO:hasValue "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#velocities
+SRO:velocities rdf:type owl:NamedIndividual ,
+                        SRO:OutputMDForDeposition ;
+               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#velocity
+SRO:velocity rdf:type owl:NamedIndividual ,
+                      SRO:OutputPhaseField ;
+             SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#viscosity
+SRO:viscosity rdf:type owl:NamedIndividual ,
+                       SRO:InputPhaseField ;
+              SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#2DVelocityDistribution
+<http://www.semanticweb.org/MUSICODE/SRO#2DVelocityDistribution> rdf:type owl:NamedIndividual ,
+                                                                          SRO:OutputGasProcess ;
+                                                                 SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#3DVelocityDistribution
+<http://www.semanticweb.org/MUSICODE/SRO#3DVelocityDistribution> rdf:type owl:NamedIndividual ,
+                                                                          SRO:OutputGasProcess ;
+                                                                 SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
