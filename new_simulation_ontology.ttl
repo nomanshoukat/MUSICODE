@@ -1,0 +1,2503 @@
+@prefix : <http://www.semanticweb.org/MUSICODE/SRO> .
+@prefix SRO: <http://www.semanticweb.org/MUSICODE/SRO#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix musicode: <http://www.semanticweb.org/hafiznoman/ontologies/2022/3/musicode#> .
+@base <http://www.semanticweb.org/MUSICODE/SRO> .
+
+<http://www.semanticweb.org/MUSICODE/SRO> rdf:type owl:Ontology ;
+                                           owl:versionIRI <http://www.semanticweb.org/MUSICODE/SRO/1.0.0> ;
+                                           rdfs:comment """The ontology showcases all simulation activities in the MUSICODE platform and called simulation requirement ontology (SRO). 
+MUSICODE is an experimentally-validated multi-scale materials, process and device modeling & design platform enabling non-expert access to open innovation in the organic and large area electronics industry. It is a European collaborative research and innovation project led by a multi-disciplinary consortium coordinated by University Ioannina.
+To read more about the project visit http://musicode.eu/
+The SRO represents the division of all simulation processes according to length scale and the responsible partner/ organization. It also shows the connection between the different partners and the importance of outputs of one simulation activity for another. The concepts, data items, naming conventions, and relations have been finalized after a rigorous discussion with partners. The partners who have been actively involved in the discussion were UOI, Tinnit, USUR, and KIT."""@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://emmo.info/emmo#EMMO_3aa37f92_8dc5_4ee4_8438_e41e6ae20c62
+<http://emmo.info/emmo#EMMO_3aa37f92_8dc5_4ee4_8438_e41e6ae20c62> rdf:type owl:AnnotationProperty .
+
+
+###  http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25
+<http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> rdf:type owl:AnnotationProperty .
+
+
+###  http://emmo.info/emmo#EMMO_70fe84ff_99b6_4206_a9fc_9a8931836d84
+<http://emmo.info/emmo#EMMO_70fe84ff_99b6_4206_a9fc_9a8931836d84> rdf:type owl:AnnotationProperty .
+
+
+###  http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9
+<http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> rdf:type owl:AnnotationProperty .
+
+
+###  http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a
+<http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> rdf:type owl:AnnotationProperty .
+
+
+###  http://emmo.info/emmo#EMMO_bb49844b_45d7_4f0d_8cae_8e552cbc20d6
+<http://emmo.info/emmo#EMMO_bb49844b_45d7_4f0d_8cae_8e552cbc20d6> rdf:type owl:AnnotationProperty .
+
+
+###  http://emmo.info/emmo#EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f
+<http://emmo.info/emmo#EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  https://www.w3.org/2007/rif#rif:lists
+<https://www.w3.org/2007/rif#rif:lists> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://emmo.info/emmo#EMMO_3446e167_c576_49d6_846c_215bb8878a55
+<http://emmo.info/emmo#EMMO_3446e167_c576_49d6_846c_215bb8878a55> rdf:type owl:ObjectProperty .
+
+
+###  http://emmo.info/emmo#EMMO_67fc0a36_8dcb_4ffa_9a43_31074efa3296
+<http://emmo.info/emmo#EMMO_67fc0a36_8dcb_4ffa_9a43_31074efa3296> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://emmo.info/emmo#EMMO_9380ab64_0363_4804_b13f_3a8a94119a76
+<http://emmo.info/emmo#EMMO_9380ab64_0363_4804_b13f_3a8a94119a76> rdf:type owl:ObjectProperty .
+
+
+###  http://emmo.info/emmo#EMMO_ae2d1a96_bfa1_409a_a7d2_03d69e8a125a
+<http://emmo.info/emmo#EMMO_ae2d1a96_bfa1_409a_a7d2_03d69e8a125a> rdf:type owl:ObjectProperty .
+
+
+###  http://emmo.info/emmo#EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe
+<http://emmo.info/emmo#EMMO_b2282816_b7a3_44c6_b2cb_3feff1ceb7fe> rdf:type owl:ObjectProperty .
+
+
+###  http://emmo.info/emmo#EMMO_c5aae418_1622_4d02_93c5_21159e28e6c1
+<http://emmo.info/emmo#EMMO_c5aae418_1622_4d02_93c5_21159e28e6c1> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#fundedBy
+SRO:fundedBy rdf:type owl:ObjectProperty ;
+             rdfs:range SRO:EU ;
+             rdfs:comment "Project is funded by EU"@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasEmployedTool
+SRO:hasEmployedTool rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasInferredResult
+SRO:hasInferredResult rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf SRO:hasProcessOutput .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasParameter
+SRO:hasParameter rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasParticipant
+SRO:hasParticipant rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasProcessInput
+SRO:hasProcessInput rdf:type owl:ObjectProperty ;
+                    rdfs:range SRO:IntentionalProcessInput .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasProcessOutput
+SRO:hasProcessOutput rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:range SRO:Output .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasRawResult
+SRO:hasRawResult rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf SRO:hasProcessOutput .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasUnknown
+SRO:hasUnknown rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#partOf
+SRO:partOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#uses
+SRO:uses rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/okn/o/sd#hasAdjustableParameter
+<https://w3id.org/okn/o/sd#hasAdjustableParameter> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf SRO:hasParameter ;
+                                                   rdfs:comment "Parameter that can be adjusted in a configuration setup"@en ;
+                                                   rdfs:label "adjustable parameter"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://emmo.info/emmo#EMMO_23b579e1_8088_45b5_9975_064014026c42
+<http://emmo.info/emmo#EMMO_23b579e1_8088_45b5_9975_064014026c42> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasConcentrationRange
+SRO:hasConcentrationRange rdf:type owl:DatatypeProperty ;
+                          rdfs:range [ rdf:type rdfs:Datatype ;
+                                       owl:onDatatype xsd:double ;
+                                       owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:double
+                                                              ]
+                                                              [ xsd:maxInclusive "1.0"^^xsd:double
+                                                              ]
+                                                            )
+                                     ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasDeviceParameter
+SRO:hasDeviceParameter rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasFlowRateRange
+SRO:hasFlowRateRange rdf:type owl:DatatypeProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:onDatatype xsd:double ;
+                                  owl:withRestrictions ( [ xsd:minInclusive "0.01"^^xsd:double
+                                                         ]
+                                                         [ xsd:maxInclusive "30.0"^^xsd:double
+                                                         ]
+                                                       )
+                                ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasPressureRange
+SRO:hasPressureRange rdf:type owl:DatatypeProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:onDatatype xsd:double ;
+                                  owl:withRestrictions ( [ xsd:minInclusive "5.0"^^xsd:double
+                                                         ]
+                                                         [ xsd:maxInclusive "100.0"^^xsd:double
+                                                         ]
+                                                       )
+                                ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasProcessParameter
+SRO:hasProcessParameter rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasTemperatureRange
+SRO:hasTemperatureRange rdf:type owl:DatatypeProperty ;
+                        rdfs:range [ rdf:type rdfs:Datatype ;
+                                     owl:onDatatype xsd:double ;
+                                     owl:withRestrictions ( [ xsd:minInclusive "-20.0"^^xsd:double
+                                                            ]
+                                                            [ xsd:maxInclusive "80.0"^^xsd:double
+                                                            ]
+                                                          )
+                                   ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasValue
+SRO:hasValue rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasVariableRate
+SRO:hasVariableRate rdf:type owl:DatatypeProperty ;
+                    rdfs:range [ rdf:type rdfs:Datatype ;
+                                 owl:onDatatype xsd:double ;
+                                 owl:withRestrictions ( [ xsd:minInclusive "0.1"^^xsd:double
+                                                        ]
+                                                        [ xsd:maxInclusive "10.0"^^xsd:double
+                                                        ]
+                                                      )
+                               ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hasVelocityRange
+SRO:hasVelocityRange rdf:type owl:DatatypeProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:onDatatype xsd:double ;
+                                  owl:withRestrictions ( [ xsd:minInclusive "0.01"^^xsd:double
+                                                         ]
+                                                         [ xsd:maxInclusive "50.0"^^xsd:double
+                                                         ]
+                                                       )
+                                ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#investigates
+SRO:investigates rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://emmo.info/emmo#EMMO_01354ac2_cce1_4b7d_8b4a_7322d6cb10bc
+<http://emmo.info/emmo#EMMO_01354ac2_cce1_4b7d_8b4a_7322d6cb10bc> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_02c4890b_aef3_4173_9669_94d1f6baf611> ;
+                                                                  skos:prefLabel "IterativeCoupledModelsSimulation"@en .
+
+
+###  http://emmo.info/emmo#EMMO_02c0621e_a527_4790_8a0f_2bb51973c819
+<http://emmo.info/emmo#EMMO_02c0621e_a527_4790_8a0f_2bb51973c819> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A 'Mathematical' entity that is made of a 'Numeral' and a 'MeasurementUnit' defined by a physical law, connected to a physical entity through a model perspective. Measurement is done according to the same model."@en ;
+                                                                  rdfs:comment """In the same system of quantities, dim ρB = ML−3 is the quantity dimension of mass concentration of component B, and ML−3 is also the quantity dimension of mass density, ρ.
+ISO 80000-1"""@en ,
+                                                                               """Measured or simulated 'physical propertiy'-s are always defined by a physical law, connected to a physical entity through a model perspective and measurement is done according to the same model.
+
+Systems of units suggests that this is the correct approach, since except for the fundamental units (length, time, charge) every other unit is derived by mathematical relations between these fundamental units, implying a physical laws or definitions."""@en ,
+                                                                               """Measurement units of quantities of the same quantity dimension may be designated by the same name and symbol even when the quantities are not of the same kind. 
+
+For example, joule per kelvin and J/K are respectively the name and symbol of both a measurement unit of heat capacity and a measurement unit of entropy, which are generally not considered to be quantities of the same kind. 
+
+However, in some cases special measurement unit names are restricted to be used with quantities of specific kind only. 
+
+For example, the measurement unit ‘second to the power minus one’ (1/s) is called hertz (Hz) when used for frequencies and becquerel (Bq) when used for activities of radionuclides. 
+
+As another example, the joule (J) is used as a unit of energy, but never as a unit of moment of force, i.e. the newton metre (N · m)."""@en ,
+                                                                               """— quantities of the same kind have the same quantity dimension,
+— quantities of different quantity dimensions are always of different kinds, and
+— quantities having the same quantity dimension are not necessarily of the same kind.
+ISO 80000-1"""@en ;
+                                                                  skos:prefLabel "PhysicalQuantity"@en .
+
+
+###  http://emmo.info/emmo#EMMO_02c4890b_aef3_4173_9669_94d1f6baf611
+<http://emmo.info/emmo#EMMO_02c4890b_aef3_4173_9669_94d1f6baf611> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_7d56ec24_499d_487a_af7d_a91aaa787bfe> ;
+                                                                  skos:prefLabel "Coupled"@en .
+
+
+###  http://emmo.info/emmo#EMMO_038e37a3_1684_4980_b5e4_67ab34cd5bdb
+<http://emmo.info/emmo#EMMO_038e37a3_1684_4980_b5e4_67ab34cd5bdb> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty [ owl:inverseOf <http://emmo.info/emmo#EMMO_ae2d1a96_bfa1_409a_a7d2_03d69e8a125a>
+                                                                                                   ] ;
+                                                                                    owl:someValuesFrom <http://emmo.info/emmo#EMMO_f7dbce66_2822_4855_9f42_1da71aa9e923>
+                                                                                  ] ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A 'physical' that stands for a real world object that takes active part of a functional process."@en ;
+                                                                  skos:prefLabel "ActiveParticipant"@en .
+
+
+###  http://emmo.info/emmo#EMMO_084b4f77_6df7_4c6a_b705_2528aba5cdda
+<http://emmo.info/emmo#EMMO_084b4f77_6df7_4c6a_b705_2528aba5cdda> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_5dd63d84_57f5_4b79_b760_fe940c06680d> ;
+                                                                  skos:prefLabel "MaterialRelationComputation"@en .
+
+
+###  http://emmo.info/emmo#EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e
+<http://emmo.info/emmo#EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> """Result of a measurement.
+
+A MeasurementResult is in EMMO expressed as a single MeasurendQuantitativeProperty and a MeasuredUncertainty"""@en ;
+                                                                  <http://emmo.info/emmo#EMMO_bb49844b_45d7_4f0d_8cae_8e552cbc20d6> "measurement result"@en ;
+                                                                  rdfs:comment "A measurement result generally contains “relevant information” about the set of measured quantity properties, such that some may be more representative of the measured quantity than others. This may be expressed in the form of a probability density function (pdf)."@en ;
+                                                                  skos:prefLabel "MeasurementResult"@en .
+
+
+###  http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703
+<http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_90ae56e4_d197_49b6_be1a_0049e4756606> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An object which is an holistic spatial part of a process."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "A student during an examination."@en ;
+                                                                  skos:prefLabel "Participant"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703> ;
+   owl:annotatedProperty skos:prefLabel ;
+   owl:annotatedTarget "Participant"@en ;
+   <http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> "From particeps (“taking part in, sharing in”), from pars (“part”) + capiō (“to take”)."@en
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895
+<http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty [ owl:inverseOf <http://emmo.info/emmo#EMMO_3446e167_c576_49d6_846c_215bb8878a55>
+                                                                                                   ] ;
+                                                                                    owl:someValuesFrom <http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0>
+                                                                                  ] ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A 'Variable' is a symbolic object that stands for a numerical defined 'Mathematical' object like e.g. a number, a vector, a matrix."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> """x
+k"""@en ;
+                                                                  skos:prefLabel "Variable"@en .
+
+
+###  http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978
+<http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> rdf:type owl:Class ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A 'Property' that is determined by each 'Observer' following a well defined 'Observation' procedure through a specific perception channel."@en ;
+                                                                  rdfs:comment "The word objective does not mean that each observation will provide the same results. It means that the observation followed a well defined procedure."@en ,
+                                                                               "This class refers to what is commonly known as physical property, i.e. a measurable property of physical system, whether is quantifiable or not."@en ;
+                                                                  skos:prefLabel "ObjectiveProperty"@en .
+
+
+###  http://emmo.info/emmo#EMMO_4299e344_a321_4ef2_a744_bacfcce80afc
+<http://emmo.info/emmo#EMMO_4299e344_a321_4ef2_a744_bacfcce80afc> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_472a0ca2_58bf_4618_b561_6fe68bd9fd49> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An elaboration that has no elaboration proper parts, according to a specific type."@en ;
+                                                                  skos:prefLabel "ElementaryWork"@en .
+
+
+###  http://emmo.info/emmo#EMMO_43e9a05d_98af_41b4_92f6_00f79a09bfce
+<http://emmo.info/emmo#EMMO_43e9a05d_98af_41b4_92f6_00f79a09bfce> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_e04884d9_eda6_487e_93d5_7722d7eda96b> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A whole that is identified according to a criteria based on its temporal evolution that is satisfied throughout its time extension."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f> "A process can be defined only according to an entity type. The minimum process is an entity made of two entities of the same type that are temporally related."@en ;
+                                                                  rdfs:comment """Following the common definition of process, the reader may think that every whole should be a process, since every 4D object always has a time dimension. However, in the EMMO we restrict the meaning of the word process to items whose evolution in time have a particular meaning for the ontologist (i.e. every 4D object unfolds in time, but not every 4D time unfolding may be of interest for the ontologist and categorized as a process).
+
+For this reason, the definition of every specific process subclass requires the introduction of a primitive concept."""@en ;
+                                                                  skos:altLabel "Occurrent"@en ,
+                                                                                "Perdurant"@en ;
+                                                                  skos:prefLabel "Process"@en .
+
+
+###  http://emmo.info/emmo#EMMO_463bcfda_867b_41d9_a967_211d4d437cfb
+<http://emmo.info/emmo#EMMO_463bcfda_867b_41d9_a967_211d4d437cfb> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c> ,
+                                                                                  SRO:ExperimentalMaterialCharacterization ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An 'observation' that results in a quantitative comparison of a 'property' of an 'object' with a standard reference based on a well defined mesurement procedure."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_bb49844b_45d7_4f0d_8cae_8e552cbc20d6> "measurement"@en ;
+                                                                  rdfs:comment "A measurement always implies a causal interaction between the object and the observer."@en ,
+                                                                               "A measurement is the process of experimentally obtaining one or more measurement results that can reasonably be attributed to a quantity."@en ;
+                                                                  skos:prefLabel "Measurement"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_463bcfda_867b_41d9_a967_211d4d437cfb> ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "A measurement is the process of experimentally obtaining one or more measurement results that can reasonably be attributed to a quantity."@en ;
+   rdfs:isDefinedBy "https://www.iso.org/standard/45324.html"^^xsd:anyURI
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_472a0ca2_58bf_4618_b561_6fe68bd9fd49
+<http://emmo.info/emmo#EMMO_472a0ca2_58bf_4618_b561_6fe68bd9fd49> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "The process in which an agent works with some entities according to some operative rules."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> """The process in which a control unit of a CPU (the agent) orchestrates some cached binary data according to a list of instructions (e.g. a program).
+The process in which a librarian order books alphabetically on a shelf.
+The execution of an algorithm."""@en ;
+                                                                  skos:altLabel "Job"@en ,
+                                                                                "Task"@en ,
+                                                                                "Work"@en ;
+                                                                  skos:prefLabel "Elaboration"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_472a0ca2_58bf_4618_b561_6fe68bd9fd49> ;
+   owl:annotatedProperty skos:prefLabel ;
+   owl:annotatedTarget "Elaboration"@en ;
+   <http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> "From latin Labor, meaning \"work, fatigue, effort\""@en
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_494b372c_cfdf_47d3_a4de_5e037c540de8
+<http://emmo.info/emmo#EMMO_494b372c_cfdf_47d3_a4de_5e037c540de8> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_86ca9b93_1183_4b65_81b8_c0fcd3bba5ad> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty [ owl:inverseOf <http://emmo.info/emmo#EMMO_c5aae418_1622_4d02_93c5_21159e28e6c1>
+                                                                                                   ] ;
+                                                                                    owl:someValuesFrom <http://emmo.info/emmo#EMMO_8786cb47_8e1f_4968_9b15_f6d41fc51252>
+                                                                                  ] ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An engineered object which is instrumental for reaching a particular purpose through its characteristic functioning process, with particular reference to mechanical or electronic equipment."@en ;
+                                                                  rdfs:comment """From Old French \"deviser\", meaning: arrange, plan, contrive.
+
+Literally \"dispose in portions,\" from Vulgar Latin \"divisare\", frequentative of Latin dividere, meaning \"to divide\"."""@en ;
+                                                                  skos:prefLabel "Device"@en .
+
+
+###  http://emmo.info/emmo#EMMO_4ce76d7f_03f8_45b6_9003_90052a79bfaa
+<http://emmo.info/emmo#EMMO_4ce76d7f_03f8_45b6_9003_90052a79bfaa> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A 'Mathematical' that has no unknown value, i.e. all its 'Variable\"-s parts refers to a 'Number' (for scalars that have a built-in datatype) or to another 'Numerical' (for complex numerical data structures that should rely on external implementations)."@en ;
+                                                                  skos:prefLabel "Numerical"@en .
+
+
+###  http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0
+<http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "The class of general mathematical symbolic objects respecting mathematical syntactic rules."@en ;
+                                                                  rdfs:comment "A mathematical object in this branch is not representing a concept but an actual graphical object built using mathematcal symbols arranged in some way, according to math conventions." ;
+                                                                  skos:prefLabel "Mathematical"@en .
+
+
+###  http://emmo.info/emmo#EMMO_5c68497d_2544_4cd4_897b_1ea783c9f6fe
+<http://emmo.info/emmo#EMMO_5c68497d_2544_4cd4_897b_1ea783c9f6fe> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An object that enables or facilitate an agent in the execution of a process that modifies the surrounding environment."@en ;
+                                                                  skos:prefLabel "Tool"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_5c68497d_2544_4cd4_897b_1ea783c9f6fe> ;
+   owl:annotatedProperty skos:prefLabel ;
+   owl:annotatedTarget "Tool"@en ;
+   <http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> "Old English tōl, from a Germanic base meaning ‘prepare’."@en
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_5dd63d84_57f5_4b79_b760_fe940c06680d
+<http://emmo.info/emmo#EMMO_5dd63d84_57f5_4b79_b760_fe940c06680d> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_eff42cb3_208e_4768_9a39_f8b6b3c3d7a2> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A functional icon that imitates the behaviour of the object through mathematical evaluations of some mathematical construct."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f> "The equation that describes the velocity of a uniform accelerated body v = v0 + a*t is a functional icon. In general every analitical solution of a mathematical model can be considered an icon. A functional icon expresses its similarity with the object when is part of a process the makes it imitate the behavior of the object. In the case of v = v0 + a*t, plotting the velocity over time or listing their values at certain instants is when the icon expresses it functionality."@en ;
+                                                                  skos:prefLabel "PhysicsMathematicalComputation"@en .
+
+
+###  http://emmo.info/emmo#EMMO_64963ed6_39c9_4258_85e0_6466c4b5420c
+<http://emmo.info/emmo#EMMO_64963ed6_39c9_4258_85e0_6466c4b5420c> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_472a0ca2_58bf_4618_b561_6fe68bd9fd49> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An elaboration that has at least two elaborations as proper parts."@en ;
+                                                                  skos:prefLabel "Workflow"@en .
+
+
+###  http://emmo.info/emmo#EMMO_65a007dc_2550_46b0_b394_3346c67fbb69
+<http://emmo.info/emmo#EMMO_65a007dc_2550_46b0_b394_3346c67fbb69> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_90ae56e4_d197_49b6_be1a_0049e4756606> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An object that is made of a set of sub objects working together as parts of a mechanism or an interconnecting network (natural or artificial); a complex whole."@en ;
+                                                                  rdfs:comment "A system is conceived as an aggregate of things that 'work' (or interact) together. While a system extends in time through distinct temporal parts (like every other 4D object), this elucdation focuses on a timescale in which the obejct shows a persistence in time."@en ;
+                                                                  skos:prefLabel "HolisticSystem"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_65a007dc_2550_46b0_b394_3346c67fbb69> ;
+   owl:annotatedProperty skos:prefLabel ;
+   owl:annotatedTarget "HolisticSystem"@en ;
+   <http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> "From Latin systema, from Greek sustēma, from sun- ‘with’ + histanai ‘set up’."@en
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_71d1c8f0_c6e3_44b5_a4b6_1b74ff35698a
+<http://emmo.info/emmo#EMMO_71d1c8f0_c6e3_44b5_a4b6_1b74ff35698a> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A manufacturing process whose product is the result of the combination of more substances."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "Synthesis of materials, the preparation of a cake."@en ;
+                                                                  skos:prefLabel "ContinuumManufacturing"@en .
+
+
+###  http://emmo.info/emmo#EMMO_7d56ec24_499d_487a_af7d_a91aaa787bfe
+<http://emmo.info/emmo#EMMO_7d56ec24_499d_487a_af7d_a91aaa787bfe> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_9335cf09_431f_4613_9dab_ce4ceaca965b> ;
+                                                                  skos:prefLabel "MultiSimulation"@en .
+
+
+###  http://emmo.info/emmo#EMMO_86ca9b93_1183_4b65_81b8_c0fcd3bba5ad
+<http://emmo.info/emmo#EMMO_86ca9b93_1183_4b65_81b8_c0fcd3bba5ad> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty [ owl:inverseOf <http://emmo.info/emmo#EMMO_c5aae418_1622_4d02_93c5_21159e28e6c1>
+                                                                                                   ] ;
+                                                                                    owl:someValuesFrom <http://emmo.info/emmo#EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b>
+                                                                                  ] ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A 'physical' that stands for a real world object that has been designed and manufactured for a particular purpose."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "Car, tire, composite material."@en ;
+                                                                  rdfs:comment "The 'Engineered' branch represents real world objects that show some level of complexity/heterogeneity in their composition, and are made for a specific use."@en ;
+                                                                  skos:prefLabel "Engineered"@en .
+
+
+###  http://emmo.info/emmo#EMMO_8786cb47_8e1f_4968_9b15_f6d41fc51252
+<http://emmo.info/emmo#EMMO_8786cb47_8e1f_4968_9b15_f6d41fc51252> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A manufacturing process aimed to the production of a device made of specific components."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "Assemblying a bicycle, building a car."@en ;
+                                                                  skos:prefLabel "DiscreteManufacturing"@en .
+
+
+###  http://emmo.info/emmo#EMMO_909415d1_7c43_4d5e_bbeb_7e1910159f66
+<http://emmo.info/emmo#EMMO_909415d1_7c43_4d5e_bbeb_7e1910159f66> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An 'ObjectiveProperty' that cannot be quantified."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> """CFC is a 'sign' that stands for the fact that the morphology of atoms composing the microstructure of an entity is predominantly Cubic Face Centered
+
+A color is a nominal property.
+
+Sex of a human being."""@en ;
+                                                                  rdfs:comment """\"Property of a phenomenon, body, or substance, where the property has no magnitude.\"
+
+\"A nominal property has a value, which can be expressed in words, by alphanumerical codes, or by other means.\"
+
+International vocabulary of metrology (VIM)"""@en ;
+                                                                  skos:prefLabel "NominalProperty"@en .
+
+
+###  http://emmo.info/emmo#EMMO_90ae56e4_d197_49b6_be1a_0049e4756606
+<http://emmo.info/emmo#EMMO_90ae56e4_d197_49b6_be1a_0049e4756606> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_e04884d9_eda6_487e_93d5_7722d7eda96b> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A whole that is identified according to a criteria based on its spatial configuration that is satisfied throughout its time extension."@en ;
+                                                                  rdfs:comment """A continuant (here called object) is usually defined as a whole whose all possible temporal parts are always satisfying a specific criterion (wich is the classical definition of continuants).
+However that's not possible in general, since we will finally end to temporal parts whose temporal extension is so small that the connectivity relations that define the object will no longer hold. That's the case when the temporal interval is lower than the interval that characterize the causality interactions between the object parts.
+In other terms, if the time span of a temporal part is lower than the inverse of the frequency of interactions between the constituents, then the constituents in such temporal part are not connected. The object is no more an object, neither an item, but simply a collection of fundamental parts.
+To overcome this issue, we can identify an minimum holistic temporal part (a lower time interval value), below which a specific definition for an object type does not hold anymore, that is called a fundamental."""@en ;
+                                                                  skos:altLabel "Continuant"@en ,
+                                                                                "Endurant"@en ;
+                                                                  skos:prefLabel "Object"@en .
+
+
+###  http://emmo.info/emmo#EMMO_912ac3a2_a124_4233_92dd_06c9aebea46c
+<http://emmo.info/emmo#EMMO_912ac3a2_a124_4233_92dd_06c9aebea46c> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "The act of connecting together the parts of something"@en ;
+                                                                  skos:prefLabel "Assemblying"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_912ac3a2_a124_4233_92dd_06c9aebea46c> ;
+   owl:annotatedProperty skos:prefLabel ;
+   owl:annotatedTarget "Assemblying"@en ;
+   <http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> "From Old French asembler, based on Latin ad- ‘to’ + simul ‘together’."@en
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_9335cf09_431f_4613_9dab_ce4ceaca965b
+<http://emmo.info/emmo#EMMO_9335cf09_431f_4613_9dab_ce4ceaca965b> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_eff42cb3_208e_4768_9a39_f8b6b3c3d7a2> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A estimation of a property using a functional icon."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "I calculate the electrical conductivity of an Ar-He plasma with the Chapman-Enskog method and use the value as property for it."@en ;
+                                                                  skos:altLabel "Modelling"@en ;
+                                                                  skos:prefLabel "Simulation"@en .
+
+
+###  http://emmo.info/emmo#EMMO_9471e8ff_ca96_4acd_9364_6e63489ae2b3
+<http://emmo.info/emmo#EMMO_9471e8ff_ca96_4acd_9364_6e63489ae2b3> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_9335cf09_431f_4613_9dab_ce4ceaca965b> ;
+                                                                  skos:prefLabel "ElementarySimulation"@en .
+
+
+###  http://emmo.info/emmo#EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b
+<http://emmo.info/emmo#EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "The process of transforming an precursor object (e.g. raw materials) into a product by the use of manual labor, machinery or chemical/biological processes."@en ;
+                                                                  skos:prefLabel "Manufacturing"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b> ;
+   owl:annotatedProperty skos:prefLabel ;
+   owl:annotatedTarget "Manufacturing"@en ;
+   <http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> "From Latin manufacture: \"made by hand\"."@en
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_ae15fb4f_8e4d_41de_a0f9_3997f89ba6a2
+<http://emmo.info/emmo#EMMO_ae15fb4f_8e4d_41de_a0f9_3997f89ba6a2> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty [ owl:inverseOf <http://emmo.info/emmo#EMMO_3446e167_c576_49d6_846c_215bb8878a55>
+                                                                                                   ] ;
+                                                                                    owl:allValuesFrom <http://emmo.info/emmo#EMMO_4ce76d7f_03f8_45b6_9003_90052a79bfaa>
+                                                                                  ] ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A 'varaible' that stand for a well known constant."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "π refers to the constant number ~3.14"@en ;
+                                                                  skos:prefLabel "Constant"@en .
+
+
+###  http://emmo.info/emmo#EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c
+<http://emmo.info/emmo#EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_43e9a05d_98af_41b4_92f6_00f79a09bfce> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A process occurring with the active participation of an agent that drives the process according to a specific objective (intention)."@en ;
+                                                                  skos:altLabel "Project"@en ;
+                                                                  skos:prefLabel "IntentionalProcess"@en .
+
+
+###  http://emmo.info/emmo#EMMO_c0afb341_7d31_4883_a307_ae4606df2a1b
+<http://emmo.info/emmo#EMMO_c0afb341_7d31_4883_a307_ae4606df2a1b> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "The agent that is participates and drives a manufacturing process."@en ;
+                                                                  skos:prefLabel "Manufacturer"@en .
+
+
+###  http://emmo.info/emmo#EMMO_ceaaf9f7_fd11_424b_8fda_9afa186af186
+<http://emmo.info/emmo#EMMO_ceaaf9f7_fd11_424b_8fda_9afa186af186> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_90ae56e4_d197_49b6_be1a_0049e4756606> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An object which is an holistic spatial part of a object."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "A tire is a constituent of a car."@en ;
+                                                                  skos:altLabel "ObjectPart"@en ;
+                                                                  skos:prefLabel "Constituent"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_ceaaf9f7_fd11_424b_8fda_9afa186af186> ;
+   owl:annotatedProperty skos:prefLabel ;
+   owl:annotatedTarget "Constituent"@en ;
+   <http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> "From Latin cōnstituēns, present participle of cōnstituō (“I establish”), from com- (“together”) + statuo (“I set, place, establish”)."@en
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_d0bcf2ca_cd55_4f34_8fc2_2decc4c6087a
+<http://emmo.info/emmo#EMMO_d0bcf2ca_cd55_4f34_8fc2_2decc4c6087a> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_9335cf09_431f_4613_9dab_ce4ceaca965b> ;
+                                                                  skos:altLabel "StandaloneModelSimulation"@en ;
+                                                                  skos:prefLabel "SingleAppSimulation" .
+
+
+###  http://emmo.info/emmo#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a
+<http://emmo.info/emmo#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895> ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "viscosity in the Navier-Stokes equation"@en ;
+                                                                  rdfs:comment "A 'variable' whose value is assumed to be known independently from the equation, but whose value is not explicitated in the equation."@en ;
+                                                                  skos:prefLabel "Parameter"@en .
+
+
+###  http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8
+<http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8> rdf:type owl:Class ;
+                                                                  skos:prefLabel "Language"@en .
+
+
+###  http://emmo.info/emmo#EMMO_dd4a7f3e_ef56_466c_ac1a_d2716b5f87ec
+<http://emmo.info/emmo#EMMO_dd4a7f3e_ef56_466c_ac1a_d2716b5f87ec> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
+                                                                  <http://emmo.info/emmo#EMMO_70fe84ff_99b6_4206_a9fc_9a8931836d84> """\"A property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed by means of a number and a reference\"
+ISO 80000-1
+
+\"A reference can be a measurement unit, a measurement procedure, a reference material, or a combination of such.\"
+International vocabulary of metrology (VIM)"""@en ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A 'Quantity' that can be quantified with respect to a standardized reference physical instance (e.g. the prototype meter bar, the kg prototype) or method (e.g. resilience) through a measurement process."@en ;
+                                                                  rdfs:comment """A quantitative property is always expresssed as a quantity (i.e. a number and a reference unit). For the EMMO, a nominalistic ontology, there is no property as abstract object.
+
+A property is a sign that stands for an object according to a specific code shared by some observers.
+
+For quantititative properties, one possible code that is shared between the scientific community (the observers) is the SI system of units."""@en ,
+                                                                               "Subclasses of 'QuantitativeProperty' classify objects according to the type semiosis that is used to connect the property to the object (e.g. by measurement, by convention, by modelling)."@en ;
+                                                                  skos:prefLabel "QuantitativeProperty"@en .
+
+
+###  http://emmo.info/emmo#EMMO_e04884d9_eda6_487e_93d5_7722d7eda96b
+<http://emmo.info/emmo#EMMO_e04884d9_eda6_487e_93d5_7722d7eda96b> rdf:type owl:Class ;
+                                                                  rdfs:label "Persistence"@en ;
+                                                                  skos:prefLabel "Persistance"@en .
+
+
+###  http://emmo.info/emmo#EMMO_ec502e30_b9ec_4216_90c6_f67d2df75627
+<http://emmo.info/emmo#EMMO_ec502e30_b9ec_4216_90c6_f67d2df75627> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_7d56ec24_499d_487a_af7d_a91aaa787bfe> ;
+                                                                  skos:prefLabel "LinkedModelsSimulation"@en .
+
+
+###  http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356
+<http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_86ca9b93_1183_4b65_81b8_c0fcd3bba5ad> ,
+                                                                                  SRO:Manufactured ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty [ owl:inverseOf <http://emmo.info/emmo#EMMO_c5aae418_1622_4d02_93c5_21159e28e6c1>
+                                                                                                   ] ;
+                                                                                    owl:someValuesFrom <http://emmo.info/emmo#EMMO_71d1c8f0_c6e3_44b5_a4b6_1b74ff35698a>
+                                                                                  ] ;
+                                                                  rdfs:comment "A material that is synthesized within a manufacturing process."@en ;
+                                                                  skos:prefLabel "EngineeredMaterial"@en .
+
+
+###  http://emmo.info/emmo#EMMO_eff42cb3_208e_4768_9a39_f8b6b3c3d7a2
+<http://emmo.info/emmo#EMMO_eff42cb3_208e_4768_9a39_f8b6b3c3d7a2> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_472a0ca2_58bf_4618_b561_6fe68bd9fd49> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "An elaboration that deals with quantitative symbols (i.e. symbols associated with a quantitative oriented language)."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> """A matematician that calculates 2+2.
+A computation machine that calculate the average value of a dataset."""@en ;
+                                                                  skos:prefLabel "Computation"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://emmo.info/emmo#EMMO_eff42cb3_208e_4768_9a39_f8b6b3c3d7a2> ;
+   owl:annotatedProperty skos:prefLabel ;
+   owl:annotatedTarget "Computation"@en ;
+   <http://emmo.info/emmo#EMMO_705f27ae_954c_4f13_98aa_18473fc52b25> "From Latin con- +‎ putō (“I reckon”)."@en
+ ] .
+
+
+###  http://emmo.info/emmo#EMMO_f7dbce66_2822_4855_9f42_1da71aa9e923
+<http://emmo.info/emmo#EMMO_f7dbce66_2822_4855_9f42_1da71aa9e923> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "The process that makes a product work as intended when in use."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> """- The light-emitting process of a diode.
+- The car crash process for a crash box in a car.
+- The discharging process of a battery."""@en ;
+                                                                  skos:prefLabel "FunctionalProcess"@en .
+
+
+###  http://emmo.info/emmo#EMMO_fbcc3aad_c58a_4185_bcc9_859db779b226
+<http://emmo.info/emmo#EMMO_fbcc3aad_c58a_4185_bcc9_859db779b226> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_02c4890b_aef3_4173_9669_94d1f6baf611> ;
+                                                                  skos:prefLabel "TightlyCoupledModelsSimulation"@en .
+
+
+###  http://emmo.info/emmo#EMMO_fe7e56ce_118b_4243_9aad_20eb9f4f31f6
+<http://emmo.info/emmo#EMMO_fe7e56ce_118b_4243_9aad_20eb9f4f31f6> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895> ;
+                                                                  <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "The dependent variable for which an equation has been written."@en ;
+                                                                  <http://emmo.info/emmo#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a> "Velocity, for the Navier-Stokes equation."@en ;
+                                                                  skos:prefLabel "Unknown"@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AFM
+SRO:AFM rdf:type owl:Class ;
+        rdfs:subClassOf SRO:MeasuringDevice .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AFMInferredMeasurementResult
+SRO:AFMInferredMeasurementResult rdf:type owl:Class ;
+                                 rdfs:subClassOf SRO:InferredMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AFMMeasurement
+SRO:AFMMeasurement rdf:type owl:Class ;
+                   rdfs:subClassOf SRO:StructuralPropertyMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AFMRawMeasurementResult
+SRO:AFMRawMeasurementResult rdf:type owl:Class ;
+                            rdfs:subClassOf SRO:RawMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#APEVA
+SRO:APEVA rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AUTH
+SRO:AUTH rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Atoms
+SRO:Atoms rdf:type owl:Class ;
+          rdfs:subClassOf SRO:ModelEntity .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Beads
+SRO:Beads rdf:type owl:Class ;
+          rdfs:subClassOf SRO:ModelEntity .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#CTU
+SRO:CTU rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#CapacitanceVoltageMeasurement
+SRO:CapacitanceVoltageMeasurement rdf:type owl:Class ;
+                                  rdfs:subClassOf SRO:ElectricalPropertyMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#CharacterizationMeasurementResult
+SRO:CharacterizationMeasurementResult rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://emmo.info/emmo#EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ChargeExtractionMeasurement
+SRO:ChargeExtractionMeasurement rdf:type owl:Class ;
+                                rdfs:subClassOf SRO:ElectricalPropertyMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ChemicalPropertyMeasurement
+SRO:ChemicalPropertyMeasurement rdf:type owl:Class ;
+                                rdfs:subClassOf <http://emmo.info/emmo#EMMO_463bcfda_867b_41d9_a967_211d4d437cfb> ;
+                                rdfs:seeAlso "Chemical analysis characterizes the chemical components in a material which helps to identify unknown materials or verify that the material meets the required conditions."@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForAtomicPolarizabilities-MEL
+SRO:DFTForAtomicPolarizabilities-MEL rdf:type owl:Class ;
+                                     rdfs:subClassOf SRO:Electrons ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasProcessInput ;
+                                                       owl:someValuesFrom SRO:InputForDFTAtomicPolarizabilities-MEL
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasProcessOutput ;
+                                                       owl:someValuesFrom SRO:DFTForAtomicPolarizabilities-MELMeasurementResult
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasParticipant ;
+                                                       owl:allValuesFrom SRO:UOI
+                                                     ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForAtomicPolarizabilities-MELMeasurementResult
+SRO:DFTForAtomicPolarizabilities-MELMeasurementResult rdf:type owl:Class ;
+                                                      rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForChargeTransportParameters
+SRO:DFTForChargeTransportParameters rdf:type owl:Class ;
+                                    rdfs:subClassOf SRO:Electrons ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty SRO:hasProcessInput ;
+                                                      owl:someValuesFrom SRO:InputForDFTChargeTransportParameters
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty SRO:hasProcessOutput ;
+                                                      owl:someValuesFrom SRO:DFTForChargeTransportParametersMeasurementResult
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty SRO:hasParticipant ;
+                                                      owl:allValuesFrom SRO:UOI
+                                                    ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForChargeTransportParametersMeasurementResult
+SRO:DFTForChargeTransportParametersMeasurementResult rdf:type owl:Class ;
+                                                     rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForPartialCharges-RESP
+SRO:DFTForPartialCharges-RESP rdf:type owl:Class ;
+                              rdfs:subClassOf SRO:Electrons ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty SRO:hasProcessInput ;
+                                                owl:someValuesFrom SRO:InputForDFTPartialCharges-RESP
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty SRO:hasProcessOutput ;
+                                                owl:someValuesFrom SRO:DFTForPartialCharges-RESPMeasurementResult
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty SRO:hasParticipant ;
+                                                owl:allValuesFrom SRO:UOI
+                                              ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForPartialCharges-RESPMeasurementResult
+SRO:DFTForPartialCharges-RESPMeasurementResult rdf:type owl:Class ;
+                                               rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForStructuralAndElectronicProperties
+SRO:DFTForStructuralAndElectronicProperties rdf:type owl:Class ;
+                                            rdfs:subClassOf SRO:Electrons ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty SRO:hasProcessInput ;
+                                                              owl:someValuesFrom SRO:InputForDFTStructuralAndElectronicProperties
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty SRO:hasProcessOutput ;
+                                                              owl:someValuesFrom SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty SRO:hasParticipant ;
+                                                              owl:allValuesFrom SRO:USUR
+                                                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForStructuralAndElectronicPropertiesMeasurementResult
+SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult rdf:type owl:Class ;
+                                                             rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForTortionalProfiles
+SRO:DFTForTortionalProfiles rdf:type owl:Class ;
+                            rdfs:subClassOf SRO:Electrons ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasProcessInput ;
+                                              owl:someValuesFrom SRO:InputForDFTTortionalProfiles
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasProcessOutput ;
+                                              owl:someValuesFrom SRO:DFTForTortionalProfilesMeasurementResult
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasParticipant ;
+                                              owl:allValuesFrom SRO:UOI
+                                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DFTForTortionalProfilesMeasurementResult
+SRO:DFTForTortionalProfilesMeasurementResult rdf:type owl:Class ;
+                                             rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DeepLevelTransientSpectrosopyMeasurement
+SRO:DeepLevelTransientSpectrosopyMeasurement rdf:type owl:Class ;
+                                             rdfs:subClassOf SRO:ElectricalPropertyMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DeviceParameter
+SRO:DeviceParameter rdf:type owl:Class ;
+                    rdfs:subClassOf <http://emmo.info/emmo#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DoubleInjectionTransientsMeasurement
+SRO:DoubleInjectionTransientsMeasurement rdf:type owl:Class ;
+                                         rdfs:subClassOf SRO:ElectricalPropertyMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DriftDiffusionAndLightAbsorption
+SRO:DriftDiffusionAndLightAbsorption rdf:type owl:Class ;
+                                     rdfs:subClassOf SRO:FiniteVolume ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasProcessInput ;
+                                                       owl:someValuesFrom SRO:InputForDriftDiffusionAndLightAbsorption
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasProcessOutput ;
+                                                       owl:someValuesFrom SRO:DriftDiffusionAndLightAbsorptionMeasurementResult
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasParticipant ;
+                                                       owl:allValuesFrom SRO:Fluxim
+                                                     ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DriftDiffusionAndLightAbsorptionMeasurementResult
+SRO:DriftDiffusionAndLightAbsorptionMeasurementResult rdf:type owl:Class ;
+                                                      rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Dryer
+SRO:Dryer rdf:type owl:Class ;
+          rdfs:subClassOf SRO:FiniteVolume ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty SRO:hasProcessInput ;
+                            owl:someValuesFrom SRO:InputForDryer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty SRO:hasProcessOutput ;
+                            owl:someValuesFrom SRO:DryerMeasurementResult
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty SRO:hasParticipant ;
+                            owl:allValuesFrom SRO:Tinnit
+                          ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#DryerMeasurementResult
+SRO:DryerMeasurementResult rdf:type owl:Class ;
+                           rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ESTECO
+SRO:ESTECO rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#EU
+SRO:EU rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ElectricalPropertyMeasurement
+SRO:ElectricalPropertyMeasurement rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_463bcfda_867b_41d9_a967_211d4d437cfb> ;
+                                  rdfs:comment """Electrical Characterization includes many different techniques to evaluate ferroelectric, piezoelectric, dielectric and semiconductor materials and devices through a range of variables including time, temperature, frequency and voltage.
+Charge extraction measurement, CV, External quantum efficiency (EQE), Standard I-V, thermal admittance/impedance spectroscopy, space-charge limited current (SCLC), deep-level transient spectroscopy, double-injection transients (DIT) are some example of electrical characterization techniques."""@en ;
+                                  rdfs:seeAlso "https://www.mri.psu.edu/materials-characterization-lab/characterization-techniques/electrical-characterization-lab"@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Electrons
+SRO:Electrons rdf:type owl:Class ;
+              rdfs:subClassOf SRO:ModelEntity .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ElectrostaticsAndPolarization-MEL
+SRO:ElectrostaticsAndPolarization-MEL rdf:type owl:Class ;
+                                      rdfs:subClassOf SRO:Atoms ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty SRO:hasProcessInput ;
+                                                        owl:someValuesFrom SRO:InputForElectrostaticsAndPolarization-MEL
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty SRO:hasProcessOutput ;
+                                                        owl:someValuesFrom SRO:ElectrostaticsAndPolarization-MELMeasurementResult
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty SRO:hasParticipant ;
+                                                        owl:allValuesFrom SRO:UOI
+                                                      ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ElectrostaticsAndPolarization-MELMeasurementResult
+SRO:ElectrostaticsAndPolarization-MELMeasurementResult rdf:type owl:Class ;
+                                                       rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ExperimentalMaterialCharacterization
+SRO:ExperimentalMaterialCharacterization rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://emmo.info/emmo#EMMO_bafc17b5_9be4_4823_8bbe_ab4e90b6738c> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty SRO:partOf ;
+                                                           owl:someValuesFrom <https://schema.org/ResearchProject>
+                                                         ] ;
+                                         skos:definition "The determination of the material properties through tests conducted on suitably designed specimens."@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#FiniteVolume
+SRO:FiniteVolume rdf:type owl:Class ;
+                 rdfs:subClassOf SRO:ModelEntity .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Fluxim
+SRO:Fluxim rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#GRANTA
+SRO:GRANTA rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#GasProcessLine-CFD
+SRO:GasProcessLine-CFD rdf:type owl:Class ;
+                       rdfs:subClassOf SRO:FiniteVolume ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty SRO:hasProcessInput ;
+                                         owl:someValuesFrom SRO:InputForGasProcess
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty SRO:hasProcessOutput ;
+                                         owl:someValuesFrom SRO:GasProcessMeasurementResult
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty SRO:hasParticipant ;
+                                         owl:allValuesFrom SRO:Tinnit
+                                       ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#GasProcessMeasurementResult
+SRO:GasProcessMeasurementResult rdf:type owl:Class ;
+                                rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ImpedanceSpectroscopyMeasurement
+SRO:ImpedanceSpectroscopyMeasurement rdf:type owl:Class ;
+                                     rdfs:subClassOf SRO:ElectricalPropertyMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InferredMeasurementResult
+SRO:InferredMeasurementResult rdf:type owl:Class ;
+                              rdfs:subClassOf SRO:CharacterizationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForAFMMeasurement
+SRO:InputForAFMMeasurement rdf:type owl:Class ;
+                           rdfs:subClassOf SRO:InputForExperimentalMaterialCharacterization .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForDFTAtomicPolarizabilities-MEL
+SRO:InputForDFTAtomicPolarizabilities-MEL rdf:type owl:Class ;
+                                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                                owl:unionOf ( SRO:InputForDFTPartialCharges-RESP
+                                                                              SRO:InputForDFTTortionalProfiles
+                                                                            )
+                                                              ] ;
+                                          rdfs:subClassOf SRO:InputForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForDFTChargeTransportParameters
+SRO:InputForDFTChargeTransportParameters rdf:type owl:Class ;
+                                         rdfs:subClassOf SRO:InputForSimulation ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty SRO:uses ;
+                                                           owl:allValuesFrom SRO:MDForRelaxingMolecularConfirmationMeasurementResult
+                                                         ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForDFTPartialCharges-RESP
+SRO:InputForDFTPartialCharges-RESP rdf:type owl:Class ;
+                                   owl:equivalentClass [ rdf:type owl:Class ;
+                                                         owl:unionOf ( SRO:InputForDFTAtomicPolarizabilities-MEL
+                                                                       SRO:InputForDFTTortionalProfiles
+                                                                     )
+                                                       ] ;
+                                   rdfs:subClassOf SRO:InputForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForDFTStructuralAndElectronicProperties
+SRO:InputForDFTStructuralAndElectronicProperties rdf:type owl:Class ;
+                                                 rdfs:subClassOf SRO:InputForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForDFTTortionalProfiles
+SRO:InputForDFTTortionalProfiles rdf:type owl:Class ;
+                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                       owl:unionOf ( SRO:InputForDFTAtomicPolarizabilities-MEL
+                                                                     SRO:InputForDFTPartialCharges-RESP
+                                                                   )
+                                                     ] ;
+                                 rdfs:subClassOf SRO:InputForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForDriftDiffusionAndLightAbsorption
+SRO:InputForDriftDiffusionAndLightAbsorption rdf:type owl:Class ;
+                                             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty SRO:uses ;
+                                                                   owl:allValuesFrom SRO:KineticMonteCarloForChargeTransportMeasurementResult
+                                                                 ] ;
+                                             rdfs:subClassOf SRO:InputForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForDryer
+SRO:InputForDryer rdf:type owl:Class ;
+                  rdfs:subClassOf SRO:InputForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForElectrostaticsAndPolarization-MEL
+SRO:InputForElectrostaticsAndPolarization-MEL rdf:type owl:Class ;
+                                              rdfs:subClassOf SRO:InputForSimulation ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty SRO:uses ;
+                                                                owl:someValuesFrom SRO:DFTForAtomicPolarizabilities-MELMeasurementResult
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty SRO:uses ;
+                                                                owl:someValuesFrom SRO:DFTForPartialCharges-RESPMeasurementResult
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty SRO:uses ;
+                                                                owl:someValuesFrom SRO:MDForRelaxingMolecularConfirmationMeasurementResult
+                                                              ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForExperimentalMaterialCharacterization
+SRO:InputForExperimentalMaterialCharacterization rdf:type owl:Class ;
+                                                 rdfs:subClassOf SRO:IntentionalProcessInput .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForGasProcess
+SRO:InputForGasProcess rdf:type owl:Class ;
+                       rdfs:subClassOf SRO:InputForSimulation ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty SRO:uses ;
+                                         owl:someValuesFrom SRO:MDForDepositionMeasurementResult
+                                       ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForKineticMonteCarloForChargeTransport
+SRO:InputForKineticMonteCarloForChargeTransport rdf:type owl:Class ;
+                                                rdfs:subClassOf SRO:InputForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForMDForDeposition
+SRO:InputForMDForDeposition rdf:type owl:Class ;
+                            rdfs:subClassOf SRO:InputForSimulation ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:uses ;
+                                              owl:someValuesFrom SRO:DFTForPartialCharges-RESPMeasurementResult
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:uses ;
+                                              owl:someValuesFrom SRO:MDForRelaxingMolecularConfirmationMeasurementResult
+                                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForMDForRelaxingMolecularConfirmation
+SRO:InputForMDForRelaxingMolecularConfirmation rdf:type owl:Class ;
+                                               rdfs:subClassOf SRO:InputForSimulation ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty SRO:uses ;
+                                                                 owl:someValuesFrom SRO:DFTForPartialCharges-RESPMeasurementResult
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty SRO:uses ;
+                                                                 owl:someValuesFrom SRO:DFTForTortionalProfilesMeasurementResult
+                                                               ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForMontoCarloForMesoscopicMorphologies
+SRO:InputForMontoCarloForMesoscopicMorphologies rdf:type owl:Class ;
+                                                rdfs:subClassOf SRO:InputForSimulation ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty SRO:uses ;
+                                                                  owl:someValuesFrom SRO:GasProcessMeasurementResult
+                                                                ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForPhaseField
+SRO:InputForPhaseField rdf:type owl:Class ;
+                       rdfs:subClassOf SRO:InputForSimulation ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty SRO:uses ;
+                                         owl:someValuesFrom SRO:DryerMeasurementResult
+                                       ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForProfilometryMeasurement
+SRO:InputForProfilometryMeasurement rdf:type owl:Class ;
+                                    rdfs:subClassOf SRO:InputForExperimentalMaterialCharacterization .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForSimulation
+SRO:InputForSimulation rdf:type owl:Class ;
+                       rdfs:subClassOf SRO:IntentionalProcessInput .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForSlotDie
+SRO:InputForSlotDie rdf:type owl:Class ;
+                    rdfs:subClassOf SRO:InputForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForStandardCurrentVoltageMeasurement
+SRO:InputForStandardCurrentVoltageMeasurement rdf:type owl:Class ;
+                                              rdfs:subClassOf SRO:InputForExperimentalMaterialCharacterization .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputForUV-Vis-NIRSpectroscopyMeasurement
+SRO:InputForUV-Vis-NIRSpectroscopyMeasurement rdf:type owl:Class ;
+                                              rdfs:subClassOf SRO:InputForExperimentalMaterialCharacterization .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#InputFromOtherMethods
+SRO:InputFromOtherMethods rdf:type owl:Class ;
+                          rdfs:subClassOf SRO:InputForKineticMonteCarloForChargeTransport ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty SRO:uses ;
+                                            owl:someValuesFrom SRO:DFTForChargeTransportParametersMeasurementResult
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty SRO:uses ;
+                                            owl:someValuesFrom SRO:ElectrostaticsAndPolarization-MELMeasurementResult
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty SRO:uses ;
+                                            owl:someValuesFrom SRO:MDForRelaxingMolecularConfirmationMeasurementResult
+                                          ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#IntentionalProcessInput
+SRO:IntentionalProcessInput rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#KIT
+SRO:KIT rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#KineticMonteCarloForChargeTransport
+SRO:KineticMonteCarloForChargeTransport rdf:type owl:Class ;
+                                        rdfs:subClassOf SRO:Beads ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasParameter ;
+                                                          owl:someValuesFrom SRO:ParameterForKineticMonteCarloForChargeTransport
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasProcessInput ;
+                                                          owl:someValuesFrom SRO:InputForKineticMonteCarloForChargeTransport
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasProcessOutput ;
+                                                          owl:someValuesFrom SRO:KineticMonteCarloForChargeTransportMeasurementResult
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasParticipant ;
+                                                          owl:allValuesFrom SRO:UOI
+                                                        ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#KineticMonteCarloForChargeTransportMeasurementResult
+SRO:KineticMonteCarloForChargeTransportMeasurementResult rdf:type owl:Class ;
+                                                         rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#LooselyCoupledModelsSimulation
+SRO:LooselyCoupledModelsSimulation rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://emmo.info/emmo#EMMO_02c4890b_aef3_4173_9669_94d1f6baf611> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty SRO:partOf ;
+                                                     owl:someValuesFrom <https://schema.org/ResearchProject>
+                                                   ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MDForDeposition
+SRO:MDForDeposition rdf:type owl:Class ;
+                    rdfs:subClassOf SRO:Atoms ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty SRO:hasProcessInput ;
+                                      owl:someValuesFrom SRO:InputForMDForDeposition
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty SRO:hasProcessOutput ;
+                                      owl:someValuesFrom SRO:MDForDepositionMeasurementResult
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty SRO:hasParticipant ;
+                                      owl:allValuesFrom SRO:UOI
+                                    ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MDForDepositionMeasurementResult
+SRO:MDForDepositionMeasurementResult rdf:type owl:Class ;
+                                     rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MDForRelaxingMolecularConfirmation
+SRO:MDForRelaxingMolecularConfirmation rdf:type owl:Class ;
+                                       rdfs:subClassOf SRO:Atoms ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty SRO:hasProcessInput ;
+                                                         owl:someValuesFrom SRO:InputForMDForRelaxingMolecularConfirmation
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty SRO:hasProcessOutput ;
+                                                         owl:someValuesFrom SRO:MDForRelaxingMolecularConfirmationMeasurementResult
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty SRO:hasParticipant ;
+                                                         owl:allValuesFrom SRO:UOI
+                                                       ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MDForRelaxingMolecularConfirmationMeasurementResult
+SRO:MDForRelaxingMolecularConfirmationMeasurementResult rdf:type owl:Class ;
+                                                        rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MachanicalPropertyMeasurement
+SRO:MachanicalPropertyMeasurement rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_463bcfda_867b_41d9_a967_211d4d437cfb> ;
+                                  rdfs:comment "The analysis in which different types of mechanical forces are applied to check the durability and resistance properties of substances. This material characterization technique includes experiments on resilience, hardness, fatigue, torsion, traction, compression, and bending."@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Manufactured
+SRO:Manufactured rdf:type owl:Class ;
+                 rdfs:subClassOf <http://emmo.info/emmo#EMMO_90ae56e4_d197_49b6_be1a_0049e4756606> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ManufacturedDevice
+SRO:ManufacturedDevice rdf:type owl:Class ;
+                       rdfs:subClassOf SRO:Manufactured .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MeasuringDevice
+SRO:MeasuringDevice rdf:type owl:Class ;
+                    rdfs:subClassOf <http://emmo.info/emmo#EMMO_494b372c_cfdf_47d3_a4de_5e037c540de8> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ModelEntity
+SRO:ModelEntity rdf:type owl:Class ;
+                rdfs:subClassOf <http://emmo.info/emmo#EMMO_ec502e30_b9ec_4216_90c6_f67d2df75627> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MontoCarloForMesoscopicMorphologies
+SRO:MontoCarloForMesoscopicMorphologies rdf:type owl:Class ;
+                                        rdfs:subClassOf SRO:Beads ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasProcessInput ;
+                                                          owl:someValuesFrom SRO:InputForMontoCarloForMesoscopicMorphologies
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasProcessOutput ;
+                                                          owl:someValuesFrom SRO:MontoCarloForMesoscopicMorphologiesMeasurementResult
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty SRO:hasParticipant ;
+                                                          owl:allValuesFrom SRO:AUTH
+                                                        ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MontoCarloForMesoscopicMorphologiesMeasurementResult
+SRO:MontoCarloForMesoscopicMorphologiesMeasurementResult rdf:type owl:Class ;
+                                                         rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OET
+SRO:OET rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#OpticalPropertyMeasurement
+SRO:OpticalPropertyMeasurement rdf:type owl:Class ;
+                               rdfs:subClassOf <http://emmo.info/emmo#EMMO_463bcfda_867b_41d9_a967_211d4d437cfb> ;
+                               rdfs:comment "Using photons of light to determine materials properties is what we call optical characterization. These techniques explore the change on intensity, energy, phase, direction, or polarization of the light wave after interaction with the object being studied. Examples of such techniques are  Raman scattering spectroscopy, ellipsometry, spectrophotometry (UV-VIS), and Fourier transform infra-red spectroscopy (FTIR)."@en ;
+                               rdfs:seeAlso "https://link.springer.com/chapter/10.1007/978-1-4614-9281-8_2"@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Output
+SRO:Output rdf:type owl:Class ;
+           rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForAFM
+SRO:ParameterForAFM rdf:type owl:Class ;
+                    rdfs:subClassOf SRO:DeviceParameter .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForAFMMeasurement
+SRO:ParameterForAFMMeasurement rdf:type owl:Class ;
+                               rdfs:subClassOf SRO:ParameterForExperimentalMaterialCharacterization .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForExperimentalMaterialCharacterization
+SRO:ParameterForExperimentalMaterialCharacterization rdf:type owl:Class ;
+                                                     rdfs:subClassOf SRO:ProcessParameter .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForKineticMonteCarloForChargeTransport
+SRO:ParameterForKineticMonteCarloForChargeTransport rdf:type owl:Class ;
+                                                    rdfs:subClassOf SRO:ParameterForSimulation .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForProfilometer
+SRO:ParameterForProfilometer rdf:type owl:Class ;
+                             rdfs:subClassOf SRO:DeviceParameter .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForProfilometryMeasurement
+SRO:ParameterForProfilometryMeasurement rdf:type owl:Class ;
+                                        rdfs:subClassOf SRO:ParameterForExperimentalMaterialCharacterization .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForSimulation
+SRO:ParameterForSimulation rdf:type owl:Class ;
+                           rdfs:subClassOf SRO:ProcessParameter .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForSourceMeter
+SRO:ParameterForSourceMeter rdf:type owl:Class ;
+                            rdfs:subClassOf SRO:DeviceParameter .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForStandardCurrentVoltageMeasurement
+SRO:ParameterForStandardCurrentVoltageMeasurement rdf:type owl:Class ;
+                                                  rdfs:subClassOf SRO:ParameterForExperimentalMaterialCharacterization .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForUV-Vis-NIRSpectrometer
+SRO:ParameterForUV-Vis-NIRSpectrometer rdf:type owl:Class ;
+                                       rdfs:subClassOf SRO:DeviceParameter .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ParameterForUV-Vis-NIRSpectroscopyMeasurement
+SRO:ParameterForUV-Vis-NIRSpectroscopyMeasurement rdf:type owl:Class ;
+                                                  rdfs:subClassOf SRO:ParameterForExperimentalMaterialCharacterization .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#PhaseField
+SRO:PhaseField rdf:type owl:Class ;
+               rdfs:subClassOf SRO:Beads ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty SRO:hasProcessInput ;
+                                 owl:someValuesFrom SRO:InputForPhaseField
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty SRO:hasProcessOutput ;
+                                 owl:someValuesFrom SRO:PhaseFieldMeasurementResult
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty SRO:hasParticipant ;
+                                 owl:allValuesFrom SRO:KIT
+                               ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#PhaseFieldMeasurementResult
+SRO:PhaseFieldMeasurementResult rdf:type owl:Class ;
+                                rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ProcessParameter
+SRO:ProcessParameter rdf:type owl:Class ;
+                     rdfs:subClassOf <http://emmo.info/emmo#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Profilometer
+SRO:Profilometer rdf:type owl:Class ;
+                 rdfs:subClassOf SRO:MeasuringDevice ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty SRO:hasRawResult ;
+                                   owl:someValuesFrom SRO:ProfilometryRawMeasurementResult
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <https://w3id.org/okn/o/sd#hasAdjustableParameter> ;
+                                   owl:someValuesFrom SRO:ParameterForProfilometer
+                                 ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ProfilometryInferredMeasurementResult
+SRO:ProfilometryInferredMeasurementResult rdf:type owl:Class ;
+                                          rdfs:subClassOf SRO:InferredMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ProfilometryMeasurement
+SRO:ProfilometryMeasurement rdf:type owl:Class ;
+                            rdfs:subClassOf SRO:StructuralPropertyMeasurement ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasParameter ;
+                                              owl:someValuesFrom SRO:ParameterForProfilometryMeasurement
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasParticipant ;
+                                              owl:someValuesFrom SRO:Profilometer
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasProcessInput ;
+                                              owl:someValuesFrom SRO:InputForProfilometryMeasurement
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasRawResult ;
+                                              owl:someValuesFrom SRO:ProfilometryRawMeasurementResult
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty SRO:hasParticipant ;
+                                              owl:allValuesFrom SRO:USUR
+                                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ProfilometryRawMeasurementResult
+SRO:ProfilometryRawMeasurementResult rdf:type owl:Class ;
+                                     rdfs:subClassOf SRO:RawMeasurementResult ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty SRO:hasEmployedTool ;
+                                                       owl:someValuesFrom SRO:ToolForProfilometery
+                                                     ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#RawMeasurementResult
+SRO:RawMeasurementResult rdf:type owl:Class ;
+                         rdfs:subClassOf SRO:CharacterizationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#SimulationMeasurementResult
+SRO:SimulationMeasurementResult rdf:type owl:Class ;
+                                rdfs:subClassOf <http://emmo.info/emmo#EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#SlotDie
+SRO:SlotDie rdf:type owl:Class ;
+            rdfs:subClassOf SRO:FiniteVolume ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty SRO:hasProcessInput ;
+                              owl:someValuesFrom SRO:InputForSlotDie
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty SRO:hasProcessOutput ;
+                              owl:someValuesFrom SRO:SlotDieMeasurementResult
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty SRO:hasParticipant ;
+                              owl:allValuesFrom SRO:Tinnit
+                            ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#SlotDieMeasurementResult
+SRO:SlotDieMeasurementResult rdf:type owl:Class ;
+                             rdfs:subClassOf SRO:SimulationMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#SourceMeter
+SRO:SourceMeter rdf:type owl:Class ;
+                rdfs:subClassOf SRO:MeasuringDevice .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#StandardCurentVoltageMeasurement
+SRO:StandardCurentVoltageMeasurement rdf:type owl:Class ;
+                                     rdfs:subClassOf SRO:ElectricalPropertyMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#StandardCurrentVoltageDeviceInferredMeasurementResult
+SRO:StandardCurrentVoltageDeviceInferredMeasurementResult rdf:type owl:Class ;
+                                                          rdfs:subClassOf SRO:InferredMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#StandardCurrentVoltageDeviceRawMeasurementResult
+SRO:StandardCurrentVoltageDeviceRawMeasurementResult rdf:type owl:Class ;
+                                                     rdfs:subClassOf SRO:RawMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#StructuralPropertyMeasurement
+SRO:StructuralPropertyMeasurement rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_463bcfda_867b_41d9_a967_211d4d437cfb> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#Tinnit
+SRO:Tinnit rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ToolForProfilometery
+SRO:ToolForProfilometery rdf:type owl:Class ;
+                         rdfs:subClassOf <http://emmo.info/emmo#EMMO_5c68497d_2544_4cd4_897b_1ea783c9f6fe> ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty SRO:hasInferredResult ;
+                                           owl:someValuesFrom SRO:ProfilometryInferredMeasurementResult
+                                         ] .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#TrapLimitedSpaceChargeLimitedCurrentMeasurement
+SRO:TrapLimitedSpaceChargeLimitedCurrentMeasurement rdf:type owl:Class ;
+                                                    rdfs:subClassOf SRO:ElectricalPropertyMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#UOI
+SRO:UOI rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#USUR
+SRO:USUR rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#UV-VIS-NIR-SpectroscopyInferredMeasurementResult
+SRO:UV-VIS-NIR-SpectroscopyInferredMeasurementResult rdf:type owl:Class ;
+                                                     rdfs:subClassOf SRO:InferredMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#UV-VIS-NIR-SpectroscopyRawMeasurementResult
+SRO:UV-VIS-NIR-SpectroscopyRawMeasurementResult rdf:type owl:Class ;
+                                                rdfs:subClassOf SRO:RawMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#UV-VIS-NIRMeasurement
+SRO:UV-VIS-NIRMeasurement rdf:type owl:Class ;
+                          rdfs:subClassOf SRO:OpticalPropertyMeasurement ;
+                          rdfs:comment "UV/VIS/NIR spectroscopy is a powerful analytical technique to determine the optical properties (transmittance, reflectance and absorbance) of liquids and solids. It can be applied to characterize semiconductor materials, coatings, glass and many other research and manufacturing materials. UV/VIS/NIR operates in the optical range between 175 nm to 3300 nm."@en .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#UV-Vis-NIRSpectrometer
+SRO:UV-Vis-NIRSpectrometer rdf:type owl:Class ;
+                           rdfs:subClassOf SRO:MeasuringDevice .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO/prov:Person
+<http://www.semanticweb.org/MUSICODE/SRO/prov:Person> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                                      skos:definition "A person, a group of them, or an Institution (organization) who, within a Project, conducts Experiment on one or more Laboratories using one or more Instruments in order to collect and analyze Research Data, or is interested in data collected or analyzed by other Research Users on the same or other Facilities. Research User may be assigned with a role, e.g. to designate the user as a Principal Investigator."@en .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703> .
+
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+<http://www.w3.org/ns/prov#SoftwareAgent> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+
+
+###  https://schema.org/Project
+<https://schema.org/Project> rdf:type owl:Class ;
+                             rdfs:comment "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim"@en ,
+                                          "Ein typischerweise kollektives Unterfangen zum Erreichen eines vorab geplanten Ziels"@de ;
+                             skos:editorialNote "changed by m4i: added German definition, added language tag to English definition, shortened definition"@en ,
+                                                "changed by m4i: use of skos:prefLabel instead of rdfs:label, added German label, added language tag to English label"@en ;
+                             skos:prefLabel "Project"@en ,
+                                            "Projekt"@de .
+
+
+###  https://schema.org/ResearchProject
+<https://schema.org/ResearchProject> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://schema.org/Project> ;
+                                     rdfs:comment "A research project"@en ,
+                                                  "ein Forschungsprojekt"@de ;
+                                     skos:editorialNote "changed by m4i: added German definition, added language tag to English definition"@en ,
+                                                        "changed by m4i: changed label to \"research project\" (no CamelCase)"@en ,
+                                                        "changed by m4i: use of skos:prefLabel instead of rdfs:label, added German label, added language tag to English label"@en ;
+                                     skos:prefLabel "Forschungsprojekt"@de ,
+                                                    "research project"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ASCIDatafile
+SRO:ASCIDatafile rdf:type owl:NamedIndividual ,
+                          SRO:ProfilometryRawMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#AtomicPolarizabilities
+SRO:AtomicPolarizabilities rdf:type owl:NamedIndividual ;
+                           SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#COMCoordinates
+SRO:COMCoordinates rdf:type owl:NamedIndividual ,
+                            SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                   SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#CisDistortedMinimum
+SRO:CisDistortedMinimum rdf:type owl:NamedIndividual ,
+                                 SRO:DFTForTortionalProfilesMeasurementResult ;
+                        SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#KMCInteraction
+SRO:KMCInteraction rdf:type owl:NamedIndividual ,
+                            SRO:ParameterForKineticMonteCarloForChargeTransport .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#MUSICODE
+SRO:MUSICODE rdf:type owl:NamedIndividual ,
+                      <https://schema.org/ResearchProject> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#ReorganizationalEnergyExternal
+SRO:ReorganizationalEnergyExternal rdf:type owl:NamedIndividual ,
+                                            SRO:ParameterForKineticMonteCarloForChargeTransport .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#TransDistortedMinimum
+SRO:TransDistortedMinimum rdf:type owl:NamedIndividual ,
+                                   SRO:DFTForTortionalProfilesMeasurementResult ;
+                          SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#absorptionProfiles
+SRO:absorptionProfiles rdf:type owl:NamedIndividual ,
+                                SRO:DriftDiffusionAndLightAbsorptionMeasurementResult ;
+                       SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomList
+SRO:atomList rdf:type owl:NamedIndividual ,
+                      SRO:InputForDFTStructuralAndElectronicProperties ;
+             SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomName
+SRO:atomName rdf:type owl:NamedIndividual ,
+                      SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+             SRO:hasValue "" .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomType
+SRO:atomType rdf:type owl:NamedIndividual ,
+                      SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+             SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomicCoordinates
+SRO:atomicCoordinates rdf:type owl:NamedIndividual ,
+                               SRO:DFTForAtomicPolarizabilities-MELMeasurementResult ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#atomicPositions
+SRO:atomicPositions rdf:type owl:NamedIndividual ,
+                             SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult ;
+                    SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#averageIsotropicMobility
+SRO:averageIsotropicMobility rdf:type owl:NamedIndividual ,
+                                      SRO:KineticMonteCarloForChargeTransportMeasurementResult ;
+                             SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#averageMobilityEigenvalues
+SRO:averageMobilityEigenvalues rdf:type owl:NamedIndividual ,
+                                        SRO:KineticMonteCarloForChargeTransportMeasurementResult ;
+                               SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#averageMobilityTensor
+SRO:averageMobilityTensor rdf:type owl:NamedIndividual ,
+                                   SRO:KineticMonteCarloForChargeTransportMeasurementResult ;
+                          SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#bandGap
+SRO:bandGap rdf:type owl:NamedIndividual ,
+                     SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult ;
+            SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#bandStructure
+SRO:bandStructure rdf:type owl:NamedIndividual ,
+                           SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#beltEndFilmThickness
+SRO:beltEndFilmThickness rdf:type owl:NamedIndividual ,
+                                  SRO:SlotDieMeasurementResult ;
+                         SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#beltTemperature
+SRO:beltTemperature rdf:type owl:NamedIndividual ,
+                             SRO:InputForSlotDie ;
+                    SRO:hasTemperatureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#beltVelocity
+SRO:beltVelocity rdf:type owl:NamedIndividual ,
+                          SRO:InputForSlotDie ;
+                 SRO:hasVelocityRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#carrierType
+SRO:carrierType rdf:type owl:NamedIndividual ,
+                         SRO:ParameterForKineticMonteCarloForChargeTransport .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#chargeDensity
+SRO:chargeDensity rdf:type owl:NamedIndividual ,
+                           SRO:InputForPhaseField ;
+                  SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#chemicalStructure
+SRO:chemicalStructure rdf:type owl:NamedIndividual ,
+                               SRO:InputForDFTTortionalProfiles ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#componentChemicalPotential
+SRO:componentChemicalPotential rdf:type owl:NamedIndividual ,
+                                        SRO:PhaseFieldMeasurementResult ;
+                               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#concentrationDistribution
+SRO:concentrationDistribution rdf:type owl:NamedIndividual ,
+                                       SRO:GasProcessMeasurementResult ;
+                              SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#concentrationOfPolymer
+SRO:concentrationOfPolymer rdf:type owl:NamedIndividual ,
+                                    SRO:InputForGasProcess ;
+                           SRO:hasConcentrationRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#coordinates
+SRO:coordinates rdf:type owl:NamedIndividual ,
+                         SRO:MDForDepositionMeasurementResult ;
+                SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#coordinatesOfChargedConfiguration
+SRO:coordinatesOfChargedConfiguration rdf:type owl:NamedIndividual ,
+                                               SRO:DFTForChargeTransportParametersMeasurementResult ;
+                                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#coordinatesOfNeutralConfiguration
+SRO:coordinatesOfNeutralConfiguration rdf:type owl:NamedIndividual ,
+                                               SRO:DFTForChargeTransportParametersMeasurementResult ;
+                                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#degreeOfPolymerization
+SRO:degreeOfPolymerization rdf:type owl:NamedIndividual ,
+                                    SRO:InputForPhaseField ;
+                           SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#deltaBetweenMarkerPosition
+SRO:deltaBetweenMarkerPosition rdf:type owl:NamedIndividual ,
+                                        SRO:ProfilometryInferredMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#deltaBetweenMarkers
+SRO:deltaBetweenMarkers rdf:type owl:NamedIndividual ,
+                                 SRO:ParameterForProfilometer .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#densityOfStates
+SRO:densityOfStates rdf:type owl:NamedIndividual ,
+                             SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#depositionRate
+SRO:depositionRate rdf:type owl:NamedIndividual ,
+                            SRO:InputForGasProcess ;
+                   SRO:hasVariableRate ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#deviceCurrent
+SRO:deviceCurrent rdf:type owl:NamedIndividual ,
+                           SRO:DriftDiffusionAndLightAbsorptionMeasurementResult ;
+                  SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#deviceMerit
+SRO:deviceMerit rdf:type owl:NamedIndividual ,
+                         SRO:DriftDiffusionAndLightAbsorptionMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#distanceInXYZDirection
+SRO:distanceInXYZDirection rdf:type owl:NamedIndividual ,
+                                    SRO:ProfilometryRawMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#effectiveElectronMass
+SRO:effectiveElectronMass rdf:type owl:NamedIndividual ,
+                                   SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult ;
+                          SRO:hasTemperatureRange ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#effectiveHoleMass
+SRO:effectiveHoleMass rdf:type owl:NamedIndividual ,
+                               SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#effectivePermeability
+SRO:effectivePermeability rdf:type owl:NamedIndividual ,
+                                   SRO:PhaseFieldMeasurementResult ;
+                          SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#effectiveViscosity
+SRO:effectiveViscosity rdf:type owl:NamedIndividual ,
+                                SRO:PhaseFieldMeasurementResult ;
+                       SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#electricField
+SRO:electricField rdf:type owl:NamedIndividual ,
+                           SRO:ParameterForKineticMonteCarloForChargeTransport .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#electricalProfiles
+SRO:electricalProfiles rdf:type owl:NamedIndividual ,
+                                SRO:DriftDiffusionAndLightAbsorptionMeasurementResult ;
+                       SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#electrostaticEnergies
+SRO:electrostaticEnergies rdf:type owl:NamedIndividual ,
+                                   SRO:ElectrostaticsAndPolarization-MELMeasurementResult ;
+                          SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#electrostaticPotential
+SRO:electrostaticPotential rdf:type owl:NamedIndividual ,
+                                    SRO:DFTForPartialCharges-RESPMeasurementResult ;
+                           SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyBarriers
+SRO:energyBarriers rdf:type owl:NamedIndividual ,
+                            SRO:DFTForTortionalProfilesMeasurementResult ;
+                   SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyConvergenceCriterion
+SRO:energyConvergenceCriterion rdf:type owl:NamedIndividual ,
+                                        SRO:InputForDFTStructuralAndElectronicProperties ;
+                               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyEigenvaluesOfHOMO
+SRO:energyEigenvaluesOfHOMO rdf:type owl:NamedIndividual ,
+                                     SRO:DFTForChargeTransportParametersMeasurementResult ;
+                            SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyEigenvaluesOfLUMO
+SRO:energyEigenvaluesOfLUMO rdf:type owl:NamedIndividual ,
+                                     SRO:DFTForChargeTransportParametersMeasurementResult ;
+                            SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energyPreferableAtomicCoordinates
+SRO:energyPreferableAtomicCoordinates rdf:type owl:NamedIndividual ,
+                                               SRO:DFTForTortionalProfilesMeasurementResult ;
+                                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#energySpatialCorrelations
+SRO:energySpatialCorrelations rdf:type owl:NamedIndividual ,
+                                       SRO:KineticMonteCarloForChargeTransportMeasurementResult ;
+                              SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#environmentTemperature
+SRO:environmentTemperature rdf:type owl:NamedIndividual ,
+                                    SRO:InputForSlotDie ;
+                           SRO:hasTemperatureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#exchangeCorrelationFunctional
+SRO:exchangeCorrelationFunctional rdf:type owl:NamedIndividual ,
+                                           SRO:InputForDFTStructuralAndElectronicProperties ;
+                                  SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#filmConcentration
+SRO:filmConcentration rdf:type owl:NamedIndividual ,
+                               SRO:DryerMeasurementResult ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#filmEvaporationRate
+SRO:filmEvaporationRate rdf:type owl:NamedIndividual ,
+                                 SRO:DryerMeasurementResult ;
+                        SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#filmTemperature
+SRO:filmTemperature rdf:type owl:NamedIndividual ,
+                             SRO:DryerMeasurementResult ;
+                    SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#finalAtomicPolarizabilities
+SRO:finalAtomicPolarizabilities rdf:type owl:NamedIndividual ,
+                                         SRO:DFTForAtomicPolarizabilities-MELMeasurementResult ;
+                                SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#forceConvergenceCriterion
+SRO:forceConvergenceCriterion rdf:type owl:NamedIndividual ,
+                                       SRO:InputForDFTStructuralAndElectronicProperties ;
+                              SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gasProcessBackground
+SRO:gasProcessBackground rdf:type owl:NamedIndividual ,
+                                  SRO:InputForGasProcess ;
+                         SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gasProcessModel
+SRO:gasProcessModel rdf:type owl:NamedIndividual ,
+                             SRO:InputForGasProcess ;
+                    SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gasProcessSolvent
+SRO:gasProcessSolvent rdf:type owl:NamedIndividual ,
+                               SRO:InputForGasProcess ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gassProcessInletFlowRate
+SRO:gassProcessInletFlowRate rdf:type owl:NamedIndividual ,
+                                      SRO:InputForGasProcess ;
+                             SRO:hasFlowRateRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gassProcessInletPressure
+SRO:gassProcessInletPressure rdf:type owl:NamedIndividual ,
+                                      SRO:InputForGasProcess ;
+                             SRO:hasPressureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#gassProcessInletTemperature
+SRO:gassProcessInletTemperature rdf:type owl:NamedIndividual ,
+                                         SRO:InputForGasProcess ;
+                                SRO:hasTemperatureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainAtomicCoordinates
+SRO:grainAtomicCoordinates rdf:type owl:NamedIndividual ,
+                                    SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                           SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainAtomicVelocities
+SRO:grainAtomicVelocities rdf:type owl:NamedIndividual ,
+                                   SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                          SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainCOMCoordinates
+SRO:grainCOMCoordinates rdf:type owl:NamedIndividual ,
+                                 SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                        SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainCellVectors
+SRO:grainCellVectors rdf:type owl:NamedIndividual ,
+                              SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                     SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#grainNearestNeighbors
+SRO:grainNearestNeighbors rdf:type owl:NamedIndividual ,
+                                   SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                          SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#hydrostaticPressure
+SRO:hydrostaticPressure rdf:type owl:NamedIndividual ,
+                                 SRO:PhaseFieldMeasurementResult ;
+                        SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#initialCompositionSolution
+SRO:initialCompositionSolution rdf:type owl:NamedIndividual ,
+                                        SRO:InputForPhaseField ;
+                               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#inletPressure
+SRO:inletPressure rdf:type owl:NamedIndividual ;
+                  SRO:hasPressureRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#interactionParameter
+SRO:interactionParameter rdf:type owl:NamedIndividual ,
+                                  SRO:InputForPhaseField ;
+                         SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#interfaceWidth
+SRO:interfaceWidth rdf:type owl:NamedIndividual ,
+                            SRO:InputForPhaseField ;
+                   SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#interfacialTension
+SRO:interfacialTension rdf:type owl:NamedIndividual ,
+                                SRO:InputForPhaseField ;
+                       SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#internalReorganizationEnergy
+SRO:internalReorganizationEnergy rdf:type owl:NamedIndividual ,
+                                          SRO:DFTForChargeTransportParametersMeasurementResult ;
+                                 SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#latticeVectors
+SRO:latticeVectors rdf:type owl:NamedIndividual ,
+                            SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult ;
+                   SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#layerThickness
+SRO:layerThickness rdf:type owl:NamedIndividual ,
+                            SRO:ParameterForProfilometryMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#markerPosition
+SRO:markerPosition rdf:type owl:NamedIndividual ,
+                            SRO:ParameterForProfilometer .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#markerWidth
+SRO:markerWidth rdf:type owl:NamedIndividual ,
+                         SRO:ProfilometryInferredMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#massDensity
+SRO:massDensity rdf:type owl:NamedIndividual ,
+                         SRO:InputForPhaseField ;
+                SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#materials
+SRO:materials rdf:type owl:NamedIndividual ,
+                       SRO:InputForProfilometryMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#maximumPhotocurrent
+SRO:maximumPhotocurrent rdf:type owl:NamedIndividual ,
+                                 SRO:DriftDiffusionAndLightAbsorptionMeasurementResult ;
+                        SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#microstructureEvolution
+SRO:microstructureEvolution rdf:type owl:NamedIndividual ,
+                                     SRO:PhaseFieldMeasurementResult ;
+                            SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#mobilityFieldDependence
+SRO:mobilityFieldDependence rdf:type owl:NamedIndividual ,
+                                     SRO:KineticMonteCarloForChargeTransportMeasurementResult ;
+                            SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#mobilityParameterizationSet
+SRO:mobilityParameterizationSet rdf:type owl:NamedIndividual ,
+                                         SRO:KineticMonteCarloForChargeTransportMeasurementResult ;
+                                SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#mobilityTemperatureDependence
+SRO:mobilityTemperatureDependence rdf:type owl:NamedIndividual ,
+                                           SRO:KineticMonteCarloForChargeTransportMeasurementResult ;
+                                  SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#modelSource
+SRO:modelSource rdf:type owl:NamedIndividual ,
+                         SRO:InputForSlotDie ;
+                SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#modelType
+SRO:modelType rdf:type owl:NamedIndividual ,
+                       SRO:InputForSlotDie ;
+              SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#molarvolume
+SRO:molarvolume rdf:type owl:NamedIndividual ,
+                         SRO:InputForPhaseField ;
+                SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#molecularPolarizabilityTensor
+SRO:molecularPolarizabilityTensor rdf:type owl:NamedIndividual ,
+                                           SRO:DFTForAtomicPolarizabilities-MELMeasurementResult ;
+                                  SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#nitrogenFlowRate
+SRO:nitrogenFlowRate rdf:type owl:NamedIndividual ;
+                     SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#numberOfAtoms
+SRO:numberOfAtoms rdf:type owl:NamedIndividual ,
+                           SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                  SRO:hasValue ""^^xsd:int .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#numberOfBouncedMolecules
+SRO:numberOfBouncedMolecules rdf:type owl:NamedIndividual ,
+                                      SRO:MDForDepositionMeasurementResult ;
+                             SRO:hasValue ""^^xsd:int .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#numberOfCompositions
+SRO:numberOfCompositions rdf:type owl:NamedIndividual ,
+                                  SRO:InputForPhaseField ;
+                         SRO:hasValue ""^^xsd:int .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#numberOfResidues
+SRO:numberOfResidues rdf:type owl:NamedIndividual ,
+                              SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                     SRO:hasValue ""^^xsd:int .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#orbitalEnergies
+SRO:orbitalEnergies rdf:type owl:NamedIndividual ,
+                             SRO:DFTForChargeTransportParametersMeasurementResult ;
+                    SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#originLabs
+SRO:originLabs rdf:type owl:NamedIndividual ,
+                        SRO:ToolForProfilometery .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#partialCharges
+SRO:partialCharges rdf:type owl:NamedIndividual ,
+                            SRO:DFTForPartialCharges-RESPMeasurementResult ;
+                   SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#phaseComposition
+SRO:phaseComposition rdf:type owl:NamedIndividual ,
+                              SRO:PhaseFieldMeasurementResult ;
+                     SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#phaseTemperature
+SRO:phaseTemperature rdf:type owl:NamedIndividual ;
+                     SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#phaseTransition
+SRO:phaseTransition rdf:type owl:NamedIndividual ,
+                             SRO:PhaseFieldMeasurementResult ;
+                    SRO:hasValue "" .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#polarizationEnergies
+SRO:polarizationEnergies rdf:type owl:NamedIndividual ,
+                                  SRO:ElectrostaticsAndPolarization-MELMeasurementResult ;
+                         SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#pressureDistribution
+SRO:pressureDistribution rdf:type owl:NamedIndividual ,
+                                  SRO:GasProcessMeasurementResult ;
+                         SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#propertyDistribution
+SRO:propertyDistribution rdf:type owl:NamedIndividual ,
+                                  SRO:GasProcessMeasurementResult ;
+                         SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#radialDistributionFunction
+SRO:radialDistributionFunction rdf:type owl:NamedIndividual ,
+                                        SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#rawdataConversionImage
+SRO:rawdataConversionImage rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#recombinitionProbabilities
+SRO:recombinitionProbabilities rdf:type owl:NamedIndividual ,
+                                        SRO:InputForMontoCarloForMesoscopicMorphologies ;
+                               SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#residueName
+SRO:residueName rdf:type owl:NamedIndividual ,
+                         SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                SRO:hasValue "" .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#scanningLenght
+SRO:scanningLenght rdf:type owl:NamedIndividual ,
+                            SRO:ParameterForProfilometer .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#scanningSpeed
+SRO:scanningSpeed rdf:type owl:NamedIndividual ,
+                           SRO:ParameterForProfilometer .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#selfDiffusivity
+SRO:selfDiffusivity rdf:type owl:NamedIndividual ,
+                             SRO:InputForPhaseField ;
+                    SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#setPoint
+SRO:setPoint rdf:type owl:NamedIndividual ,
+                      SRO:ParameterForProfilometer .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#slotDieInletVelocity
+SRO:slotDieInletVelocity rdf:type owl:NamedIndividual ,
+                                  SRO:InputForSlotDie ;
+                         SRO:hasVelocityRange ""^^xsd:double .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#solubility
+SRO:solubility rdf:type owl:NamedIndividual ,
+                        SRO:InputForPhaseField ;
+               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#solventName
+SRO:solventName rdf:type owl:NamedIndividual ,
+                         SRO:InputForSlotDie ;
+                SRO:hasValue "" .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#spinOrbitCoupling
+SRO:spinOrbitCoupling rdf:type owl:NamedIndividual ,
+                               SRO:InputForDFTStructuralAndElectronicProperties ;
+                      SRO:hasValue "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#stackStructure
+SRO:stackStructure rdf:type owl:NamedIndividual ,
+                            SRO:InputForProfilometryMeasurement .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#surfaceComposition
+SRO:surfaceComposition rdf:type owl:NamedIndividual ,
+                                SRO:InputForPhaseField ;
+                       SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#surfaceTension
+SRO:surfaceTension rdf:type owl:NamedIndividual ,
+                            SRO:InputForPhaseField ;
+                   SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#temperature
+SRO:temperature rdf:type owl:NamedIndividual ,
+                         SRO:ParameterForKineticMonteCarloForChargeTransport .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#temperatureDistribution
+SRO:temperatureDistribution rdf:type owl:NamedIndividual ,
+                                     SRO:GasProcessMeasurementResult ;
+                            SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#temperatureGradient
+SRO:temperatureGradient rdf:type owl:NamedIndividual ,
+                                 SRO:PhaseFieldMeasurementResult ;
+                        SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#torsionalProfiles
+SRO:torsionalProfiles rdf:type owl:NamedIndividual ,
+                               SRO:DFTForTortionalProfilesMeasurementResult ;
+                      SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#tortionalEnergyProfiles
+SRO:tortionalEnergyProfiles rdf:type owl:NamedIndividual ,
+                                     SRO:MDForRelaxingMolecularConfirmationMeasurementResult ;
+                            SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#totalEnergy
+SRO:totalEnergy rdf:type owl:NamedIndividual ,
+                         SRO:DFTForStructuralAndElectronicPropertiesMeasurementResult ;
+                SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#transferIntegral
+SRO:transferIntegral rdf:type owl:NamedIndividual ,
+                              SRO:DFTForChargeTransportParametersMeasurementResult ;
+                     SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#vanderWaals
+SRO:vanderWaals rdf:type owl:NamedIndividual ,
+                         SRO:InputForDFTStructuralAndElectronicProperties ;
+                SRO:hasValue "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#velocities
+SRO:velocities rdf:type owl:NamedIndividual ,
+                        SRO:MDForDepositionMeasurementResult ;
+               SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#velocity
+SRO:velocity rdf:type owl:NamedIndividual ,
+                      SRO:PhaseFieldMeasurementResult ;
+             SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#viscosity
+SRO:viscosity rdf:type owl:NamedIndividual ,
+                       SRO:InputForPhaseField ;
+              SRO:hasValue ""^^xsd:float .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#zHeight
+SRO:zHeight rdf:type owl:NamedIndividual ,
+                     SRO:ProfilometryInferredMeasurementResult .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#2DVelocityDistribution
+<http://www.semanticweb.org/MUSICODE/SRO#2DVelocityDistribution> rdf:type owl:NamedIndividual ,
+                                                                          SRO:GasProcessMeasurementResult ;
+                                                                 SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  http://www.semanticweb.org/MUSICODE/SRO#3DVelocityDistribution
+<http://www.semanticweb.org/MUSICODE/SRO#3DVelocityDistribution> rdf:type owl:NamedIndividual ,
+                                                                          SRO:GasProcessMeasurementResult ;
+                                                                 SRO:hasValue ""^^<https://www.w3.org/2007/rif#rif:lists> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
